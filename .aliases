@@ -1,0 +1,11 @@
+alias rubocop-branch="git --no-pager diff --name-only develop -- \"*.rb\" | xargs rubocop"
+alias vi=vim
+alias cats='highlight -O ansi'
+alias tails='tail -f'
+alias weather="ansiweather -l London,GB -d true"
+alias bopen="EDITOR=atom bundle open"
+alias r="rubocop && rspec"
+
+newfiles() {
+  git untracked | xargs -L 1 -I {} sh -c "echo \"\n* \"{} *\"\n\"; highlight --force -O ansi {} | more -r"
+}
