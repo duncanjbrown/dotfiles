@@ -22,12 +22,15 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'qpkorr/vim-bufkill'
 
 " Color Themes
 Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
-colorscheme railscasts
+colorscheme hybrid
+set background=dark
 filetype plugin indent on
 
 """"""""
@@ -88,11 +91,6 @@ endif
 " do not history when leavy buffer
 set hidden
 
-" FIXME: (broken) ctrl s to save
-noremap  <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <Esc>:update<CR>
-
 set nobackup
 set nowritebackup
 set noswapfile
@@ -106,9 +104,6 @@ set completeopt=menuone,longest,preview
 "
 " Plugins config
 "
-
-" NERDTree
-nnoremap <S-n> :NERDTreeToggle<CR>
 
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
@@ -149,14 +144,12 @@ inoremap <C-y>  <Esc>:redo<CR>
 " Tabs
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
-nnoremap <C-b>  :bprevious<CR>
-inoremap <C-b>  <Esc>:bprevious<CR>i
-nnoremap <C-f>  :bnext<CR>
-inoremap <C-f>  <Esc>:bnext<CR>i
-nnoremap <C-t>  :tabnew<CR>
-inoremap <C-t>  <Esc>:tabnew<CR>i
-nnoremap <C-k>  :bdelete<CR>
-inoremap <C-k>  <Esc>:bdelete<CR>i
+nnoremap <C-b>  :bp<CR>
+inoremap <C-b>  <Esc>:bp<CR>i
+nnoremap <C-f>  :bn<CR>
+inoremap <C-f>  <Esc>:bn<CR>i
+nnoremap <C-k>  :BD<CR>
+inoremap <C-k>  <Esc>:BD<CR>i
 
 " lazy ':'
 map \ :
@@ -165,6 +158,8 @@ let mapleader = ','
 nnoremap <Leader>p :set paste<CR>
 nnoremap <Leader>o :set nopaste<CR>
 noremap  <Leader>g :GitGutterToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
