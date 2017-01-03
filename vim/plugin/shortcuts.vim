@@ -8,6 +8,7 @@ map \ :
 
 noremap  <Leader>g :GitGutterToggle<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <S-u> :GundoToggle<CR>
 
 vnoremap <Tab> >
 vnoremap <S-Tab> <

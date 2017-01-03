@@ -23,7 +23,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'mileszs/ack.vim'
 Plug 'schickling/vim-bufonly'
 Plug 'mtth/scratch.vim'
-Plug 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'junegunn/gv.vim'
 
 " Color Themes
 Plug 'flazz/vim-colorschemes'
