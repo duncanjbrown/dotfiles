@@ -1,4 +1,3 @@
-"set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -15,18 +14,18 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'thoughtbot/vim-rspec'
 Plug 'scrooloose/syntastic'
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'altercation/vim-colors-solarized'
 Plug 'mileszs/ack.vim'
 Plug 'schickling/vim-bufonly'
 Plug 'mtth/scratch.vim'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'junegunn/gv.vim'
-
-" Color Themes
+Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
 
 call plug#end()
