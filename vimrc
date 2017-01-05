@@ -27,6 +27,7 @@ Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'junegunn/gv.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
