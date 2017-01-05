@@ -97,3 +97,5 @@ function iterm2_print_user_vars() {
 
 export BYOBU_PREFIX=$(brew --prefix)
 export PATH="$PATH:`yarn global bin`"
+source ~/.bin/tmuxinator.zsh
+
