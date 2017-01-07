@@ -1,1 +1,2 @@
-let g:syntastic_ruby_checkers = ['rubocop']
+autocmd! BufWritePost * Neomake
+
