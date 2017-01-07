@@ -5,5 +5,5 @@ map <Leader>e :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " Run rspec using thoughtbot/vim-rspec and tpope/dispatch.
-let b:rspec_executable = "bundle exec rspec"
+let b:rspec_executable = "rspec"
 let g:rspec_command = "Dispatch " . b:rspec_executable . " {spec} --format=progress"
