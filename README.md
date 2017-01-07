@@ -1,15 +1,16 @@
+## Dependencies
+
+```
+- neovim
+- rcm: https://github.com/thoughtbot/rcm
+```
+
 ## Installation
 
-Download to `~.dotfiles`
+Download to `~/.dotfiles`.
 
 ```
 rcup
-
-# Install YCM
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --all
-
-vim +PluginInstall
 ```
 
 
