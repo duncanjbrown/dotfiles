@@ -1,5 +1,6 @@
 alias rubocop-branch="git --no-pager diff --name-only develop -- \"*.rb\" | xargs rubocop"
-alias vi=vim
+alias vi=nvim
+alias vim=nvim
 alias cats='highlight -O ansi'
 alias tails='tail -f'
 alias weather="ansiweather -l London,GB -d true"
