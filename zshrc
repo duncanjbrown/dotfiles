@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.aliases
-source ~/.keys
+source ~/.environment
 eval "$(rbenv init -)"
 export EDITOR=vim
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
