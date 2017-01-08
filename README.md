@@ -13,4 +13,6 @@ Download to `~/.dotfiles`.
 rcup
 ```
 
+## Options
 
+If you have a file called `.environment` in `~`, it will be sourced from zshrc.
