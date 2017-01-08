@@ -1,3 +1,13 @@
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -8,7 +18,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'qpkorr/vim-bufkill'
