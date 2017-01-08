@@ -1,9 +1,10 @@
 ## Dependencies
 
-```
+- ZSH/oh-my-zshell
+- For Ruby: rbenv
+- For JS: yarn
 - neovim
 - rcm: https://github.com/thoughtbot/rcm
-```
 
 ## Installation
 
