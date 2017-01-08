@@ -3,5 +3,5 @@
 ln -sf ~/.vim ~/.config/nvim
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 echo "✓ Symlinked neovim to vim config"
-vim +PlugInstall +qa
+nvim +PlugInstall +qa
 echo "✓ Installed vim plugins"
