@@ -1,7 +1,19 @@
 #!/bin/sh
 
+show_done_message() {
+  echo "✓ Done"
+  echo
+}
+
+echo "Installing python plugin support for neovim..."
+pip install --upgrade neovim
+show_done_message
+
+echo "Symlinking neovim config from vim"
 ln -sf ~/.vim ~/.config/nvim
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
-echo "✓ Symlinked neovim to vim config"
-vim +PlugInstall +qa
-echo "✓ Installed vim plugins"
+show_done_message
+
+echo "Installing vim plugins"
+nvim +PlugInstall +qa
+show_done_message
