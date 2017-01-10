@@ -1,5 +1,6 @@
 ## Dependencies
 
+- tmux 2.4
 - ZSH/oh-my-zshell
 - For Ruby: rbenv
 - For JS: yarn
