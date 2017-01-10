@@ -18,6 +18,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Highlighting in quickfix
+hi Search cterm=NONE ctermfg=none ctermbg=darkblue
+
 set incsearch
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
