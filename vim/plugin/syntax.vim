@@ -1,2 +1,1 @@
-autocmd! BufWritePost * Neomake
-
+autocmd! BufEnter,BufWritePost *.rb Neomake rubocop
