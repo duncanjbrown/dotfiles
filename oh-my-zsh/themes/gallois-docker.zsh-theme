@@ -5,6 +5,13 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+stopped_jobs_status() {
+  local stopped="$(jobs | cut -d ' ' -f 6 | tr '\n' ' ')"
+  if [ -n "$stopped" ]; then
+    echo "$stopped"
+  fi
+}
+
 #Customized git status, oh-my-zsh currently does not allow render dirty status before branch
 git_custom_status() {
   local cb=$(git_current_branch)
@@ -26,4 +33,4 @@ ZSH_THEME_RVM_PROMPT_SUFFIX="]%{$reset_color%}"
 # Combine it all into a final right-side prompt
 RPS1='$(git_custom_status)$(ruby_prompt_info) $EPS1'
 
-PROMPT='%{$fg[cyan]%}$(docker_machine_status)[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+PROMPT='%{$fg[cyan]%}$(stopped_jobs_status)$(docker_machine_status)[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
