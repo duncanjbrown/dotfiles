@@ -25,7 +25,6 @@ Plug 'airblade/vim-gitgutter'
 
 " Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-Plug 'davidhalter/jedi-vim'
 
 " Take editorconfig into account
 Plug 'editorconfig/editorconfig-vim'
