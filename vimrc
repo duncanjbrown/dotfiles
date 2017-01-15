@@ -10,36 +10,82 @@ endfunction
 
 call plug#begin()
 
+" File browser
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Surround with (), '' etc
 Plug 'tpope/vim-surround'
-Plug 'kien/ctrlp.vim'
-Plug 'tomtom/tcomment_vim'
+
+" HUD at bottom
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
+
+" Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'davidhalter/jedi-vim'
+
+" Take editorconfig into account
 Plug 'editorconfig/editorconfig-vim'
+
+" Permit splits to remain when killing buffer
 Plug 'qpkorr/vim-bufkill'
+
+" Rspec runner
 Plug 'thoughtbot/vim-rspec'
+
+" Linter
 Plug 'neomake/neomake'
+
+" Ruby bindings for plugins
 Plug 'vim-ruby/vim-ruby'
+
+" Rails shortcuts
 Plug 'tpope/vim-rails'
+
+" Enables vim-rspec to run in a tmux split
 Plug 'tpope/vim-dispatch'
+
+" Git tools
 Plug 'tpope/vim-fugitive'
+
+" Do.end for ruby
 Plug 'tpope/vim-endwise'
+
+" No need for pastetoggle
 Plug 'ConradIrwin/vim-bracketed-paste'
+
+" Search in filenames
+Plug 'kien/ctrlp.vim'
+
+" Search in files
 Plug 'mileszs/ack.vim'
-Plug 'schickling/vim-bufonly'
+
+" Scratch pane with gS
 Plug 'mtth/scratch.vim'
+
+" Visual undo
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+
+" Tig in vim
 Plug 'junegunn/gv.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'flazz/vim-colorschemes'
+
+" Autoclose parens etc
 Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-multiple-cursors'
+
+" Better prose editing
 Plug 'reedes/vim-pencil'
+
+" Distraction-free mode
 Plug 'junegunn/goyo.vim'
+
+" Display CSS colours
+Plug 'ap/vim-css-color'
+
+Plug 'flazz/vim-colorschemes'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
@@ -50,12 +96,7 @@ filetype off
 set background=dark
 filetype plugin indent on
 
-if has('autocmd')
-  filetype plugin indent on
-endif
-if has('syntax') && !exists('g:syntax_on')
-  syntax enable
-endif
+syntax enable
 
 " Use :help 'option' to see the documentation for the given option.
 set autoindent
@@ -94,9 +135,6 @@ set noswapfile
 set fileformats=unix,dos,mac
 
 set completeopt=menuone,longest,preview
-
-" Disable tComment to escape some entities
-let g:tcomment#replacements_xml={}
 
 " Split to the right, and below, not to the left and above
 set splitright
