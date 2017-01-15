@@ -5,7 +5,6 @@ endif
 
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-let g:ctrlp_show_hidden = 1
 
 " The Silver Searcher
 if executable('ag')
