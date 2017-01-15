@@ -1,7 +1,7 @@
 let mapleader = ','
 
 " save with ,s
-nnoremap <Leader>s :w<CR><CR>
+nnoremap <Leader>s :w<CR>
 
 " prompt with \
 map \ :
