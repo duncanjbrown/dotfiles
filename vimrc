@@ -39,6 +39,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'reedes/vim-pencil'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
