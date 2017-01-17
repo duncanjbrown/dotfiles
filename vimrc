@@ -80,6 +80,9 @@ Plug 'junegunn/goyo.vim'
 " Display CSS colours
 Plug 'ap/vim-css-color'
 
+" Fuzzy Finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
 
