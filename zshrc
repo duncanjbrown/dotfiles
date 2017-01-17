@@ -21,3 +21,4 @@ export EDITOR=nvim
 source "${HOME}/.iterm2_shell_integration.zsh"
 source "${HOME}/.aliases"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

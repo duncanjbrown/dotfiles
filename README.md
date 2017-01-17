@@ -6,6 +6,7 @@
 - For JS: yarn
 - neovim
 - rcm: https://github.com/thoughtbot/rcm
+- fzf: https://github.com/junegunn/fzf
 
 ## Installation
 
