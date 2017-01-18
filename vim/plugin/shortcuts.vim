@@ -15,6 +15,7 @@ vnoremap <S-Tab> <
 
 " exit insert mode
 inoremap <C-c> <Esc>
+imap jj <Esc>
 
 " comment / decomment & normal comment behavior
 vmap <C-m> gc
