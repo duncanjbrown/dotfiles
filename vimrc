@@ -32,9 +32,6 @@ Plug 'editorconfig/editorconfig-vim'
 " Permit splits to remain when killing buffer
 Plug 'qpkorr/vim-bufkill'
 
-" Rspec runner
-Plug 'thoughtbot/vim-rspec'
-
 " Linter
 Plug 'neomake/neomake'
 
@@ -85,6 +82,9 @@ Plug 'ap/vim-css-color'
 
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
+
+Plug 'kchmck/vim-coffee-script'
+Plug 'janko-m/vim-test'
 
 call plug#end()
 
