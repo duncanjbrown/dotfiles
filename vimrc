@@ -26,6 +26,9 @@ Plug 'airblade/vim-gitgutter'
 " Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
+" Comments 
+Plug 'tomtom/tcomment_vim'
+
 " Take editorconfig into account
 Plug 'editorconfig/editorconfig-vim'
 

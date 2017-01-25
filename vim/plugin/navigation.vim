@@ -23,3 +23,6 @@ set hidden
 
 " Spacing between icon and title in NERDTree
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+" No fileicons at top of screen
+let g:webdevicons_enable_airline_tabline = 0
+
