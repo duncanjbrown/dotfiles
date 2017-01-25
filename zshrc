@@ -22,3 +22,7 @@ source "${HOME}/.iterm2_shell_integration.zsh"
 source "${HOME}/.aliases"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
