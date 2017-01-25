@@ -23,6 +23,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
 
+" cx and cxx
+Plug 'tommcdo/vim-exchange'
+
 " Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
