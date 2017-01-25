@@ -54,7 +54,7 @@ Plug 'tpope/vim-endwise'
 Plug 'ConradIrwin/vim-bracketed-paste'
 
 " Search in filenames
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Search in files
 Plug 'mileszs/ack.vim'
@@ -82,6 +82,10 @@ Plug 'ap/vim-css-color'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Pretty icons in nerdtree
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'

@@ -20,3 +20,6 @@ inoremap <C-k>  <Esc>:BD<CR>i
 
 " do not lose history when leaving a buffer
 set hidden
+
+" Spacing between icon and title in NERDTree
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
