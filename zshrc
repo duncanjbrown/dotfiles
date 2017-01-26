@@ -18,8 +18,8 @@ source "${HOME}/.bin/tmuxinator.zsh"
 test -e "${HOME}/.environment" && source "${HOME}/.environment"
 
 export EDITOR=nvim
-source "${HOME}/.iterm2_shell_integration.zsh"
-source "${HOME}/.aliases"
+source "${HOME}/.zsh/iterm2_shell_integration.zsh"
+source "${HOME}/.zsh/aliases"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
