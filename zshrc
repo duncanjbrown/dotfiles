@@ -20,6 +20,7 @@ test -e "${HOME}/.environment" && source "${HOME}/.environment"
 export EDITOR=nvim
 source "${HOME}/.zsh/iterm2_shell_integration.zsh"
 source "${HOME}/.zsh/aliases"
+source "${HOME}/.zsh/functions"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
