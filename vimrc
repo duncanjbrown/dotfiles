@@ -134,7 +134,7 @@ set autoread  " reload changed files
 
 set encoding=utf-8
 set tabstop=2 shiftwidth=2 expandtab
-set listchars=tab:▒░,trail:▓
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set list
 
 " In many terminal emulators the mouse works just fine, thus enable it.
