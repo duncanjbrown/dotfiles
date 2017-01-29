@@ -153,6 +153,8 @@ set completeopt=menuone,longest,preview
 set splitright
 set splitbelow
 
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
