@@ -155,6 +155,8 @@ set splitbelow
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
 
+set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
