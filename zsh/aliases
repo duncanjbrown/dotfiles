@@ -7,6 +7,7 @@ alias weather="ansiweather -l London,GB -d true"
 alias bopen="EDITOR=atom bundle open"
 alias r="rubocop && rspec"
 alias fix='$EDITOR `git diff --name-only | uniq`'
+alias emacs='/usr/local/Cellar/emacs/25.1/bin/emacs -nw'
 
 newfiles() {
   git untracked | xargs -L 1 -I {} sh -c "echo \"\n* \"{} *\"\n\"; highlight --force -O ansi {} | more -r"
