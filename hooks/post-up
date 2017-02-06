@@ -7,14 +7,24 @@ show_done_message() {
   echo
 }
 
-echo "Installing python plugin support for neovim..."
-pip install --upgrade neovim
-show_done_message
+show_nothing_to_do_message() {
+  echo "✓ Nothing to do"
+  echo
+}
 
 echo "Symlinking neovim config from vim"
 ln -sf ~/.vim ~/.config/nvim
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 show_done_message
+
+echo "Checking for tmux plugin manager"
+if [ -d "$HOME/.tmux/plugins/tpm" ]
+then
+  show_nothing_to_do_message
+else
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
+  show_done_message
+fi
 
 echo "Installing vim plugins"
 nvim +PlugInstall +qa
@@ -25,7 +35,7 @@ tmpdir="$HOME/.dotfiles/tmp"
 path="${tmpdir}/SourceCodePro.zip"
 if [ -f $path ]
 then
-  show_done_message
+  show_nothing_to_do_message
 else
   mkdir $tmpdir
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.0.0/SourceCodePro.zip -O "${path}"

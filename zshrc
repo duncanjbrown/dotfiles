@@ -22,6 +22,7 @@ export NVIM_TUI_ENABLE_CURSOR_SHAPE=true
 source "${HOME}/.zsh/iterm2_shell_integration.zsh"
 source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
+source "${HOME}/.zsh/python"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

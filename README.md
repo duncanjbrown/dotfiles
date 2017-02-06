@@ -6,9 +6,16 @@
 - For Ruby: rbenv
 - For JS: yarn
 - neovim
-- python 2.x for vim plugins
+- pyenv plus python 2.7 and 3.x for Vim plugins
 - rcm: https://github.com/thoughtbot/rcm
 - fzf: https://github.com/junegunn/fzf
+
+## Dependencies
+
+### Pyenv
+
+If you get Python errors when starting neovim, run `make python` to
+install sandboxed pythons with neovim support.
 
 ## Installation
 
