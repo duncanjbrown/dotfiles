@@ -100,8 +100,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 
-Plug 'edkolev/tmuxline.vim'
-
 call plug#end()
 
 colorscheme hybrid
