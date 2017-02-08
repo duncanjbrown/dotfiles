@@ -27,7 +27,7 @@ else
 fi
 
 echo "Installing vim plugins"
-nvim +PlugInstall +qa
+nvim +PlugUpdate +qa
 show_done_message
 
 echo 'Installing Nerd Font: Source Code Pro'
