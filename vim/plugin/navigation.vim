@@ -7,8 +7,7 @@ augroup END
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set number
-" Toggle relative numbering with ,=
-nmap <Leader>= :set rnu! rnu?<cr>
+set rnu
 
 " Ctrl-F and Ctrl-B to navigate, Ctrl-K to Kill
 nnoremap <C-b>  :bp<CR>
