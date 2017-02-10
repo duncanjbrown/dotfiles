@@ -18,6 +18,8 @@
 (use-package projectile
   :ensure t)
 
+(setq evil-want-C-i-jump nil)
+
 (use-package evil
   :ensure t)
 
@@ -56,6 +58,9 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done 'time)
+
+(setq org-todo-keywords
+      '((sequence "TODO" "REVIEW" "DONE")))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
