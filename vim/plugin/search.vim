@@ -27,7 +27,7 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 " Press enter to unhighlight searches
-nnoremap <CR> :noh<CR><CR>
+nnoremap <silent> <CR> :noh<CR><CR>
 
 " in visual mode, press // to search highlighted text
 vnoremap // y/<C-R>"<CR>
