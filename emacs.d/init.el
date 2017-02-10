@@ -51,6 +51,8 @@
 (evil-mode t)
 
 (require 'helm-config)
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; The following lines are always needed.  Choose your own keys.
 (global-set-key "\C-cl" 'org-store-link)
@@ -63,6 +65,13 @@
       '((sequence "TODO" "REVIEW" "DONE")))
 
 (setq column-number-mode t)
+
+(setq inhibit-splash-screen t) ;; don't show the splash screen
+(setq vc-follow-symlinks t) ;; follow symlinks to version-controlled files
+
+(set-frame-font "SauceCodePro Nerd Font")
+(set-default-font "SauceCodePro Nerd Font")
+(set-face-attribute 'default nil :font "SauceCodePro Nerd Font" :height 130)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
