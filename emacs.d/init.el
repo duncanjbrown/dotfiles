@@ -66,13 +66,13 @@
 
 ;; OrgMobile configuration https://mobileorg.github.io/
 ;; Set to the location of your Org files on your local system
-(setq org-directory "~/org")
+(setq org-directory "~/Dropbox/org")
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/org/flagged.org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 ;; Location of all files to be synced to MobileOrg https://groups.google.com/forum/#!topic/mobileorg-android/TcoseKmXShc
-(setq org-agenda-files '("~/org"))
+(setq org-agenda-files '("~/Dropbox/org"))
 ;; Don't smush PROPERTIES blocks into all the org files http://orgmode.org/manual/Pushing-to-MobileOrg.html
 (setq org-mobile-force-id-on-agenda-items nil)
 
