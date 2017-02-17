@@ -49,6 +49,8 @@
 
 (require 'evil)
 (evil-mode t)
+(add-to-list 'evil-emacs-state-modes 'cider-stacktrace-mode)
+(add-to-list 'evil-emacs-state-modes 'cider-repl-mode)
 
 (require 'helm-config)
 (helm-mode 1)
