@@ -52,6 +52,8 @@
 
 (require 'evil)
 (evil-mode t)
+(add-to-list 'evil-emacs-state-modes 'cider-stacktrace-mode)
+(add-to-list 'evil-emacs-state-modes 'cider-repl-mode)
 
 (require 'helm-config)
 (helm-mode 1)
@@ -71,7 +73,7 @@
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Dropbox/org")
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Dropbox/flagged.org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 ;; Location of all files to be synced to MobileOrg https://groups.google.com/forum/#!topic/mobileorg-android/TcoseKmXShc
