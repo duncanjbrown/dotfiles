@@ -38,6 +38,9 @@
 (use-package zenburn-theme
   :ensure t)
 
+(require 'ido)
+(ido-mode t)
+
 (load-theme 'zenburn t)
 ;; Install code completion and enable it globally
 (use-package company
