@@ -65,30 +65,17 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Search in files
 Plug 'mileszs/ack.vim'
 
-" Scratch pane with gS
-Plug 'mtth/scratch.vim'
-
 " Visual undo
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 
-" Tig in vim
-Plug 'junegunn/gv.vim'
-
 " Autoclose parens etc
 Plug 'jiangmiao/auto-pairs'
-
-" Better prose editing
-Plug 'reedes/vim-pencil'
-
-" Distraction-free mode
-Plug 'junegunn/goyo.vim'
 
 " Display CSS colours
 Plug 'ap/vim-css-color'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 " Pretty icons in nerdtree
 Plug 'ryanoasis/vim-devicons'
