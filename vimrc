@@ -71,6 +71,9 @@ Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 " Autoclose parens etc
 Plug 'jiangmiao/auto-pairs'
 
+" Paste with indentation
+Plug 'sickill/vim-pasta'
+
 " Display CSS colours
 Plug 'ap/vim-css-color'
 
