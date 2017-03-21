@@ -29,3 +29,4 @@ source "${HOME}/.zsh/python"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export PATH="/usr/local/sbin:$PATH"
