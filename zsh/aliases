@@ -5,7 +5,7 @@ alias cats='highlight -O ansi'
 alias tails='tail -f'
 alias weather="ansiweather -l London,GB -d true"
 alias bopen="EDITOR=atom bundle open"
-alias r="rubocop && rspec"
+alias r="rubocop && bundle exec rspec"
 alias fix='$EDITOR `git diff --name-only | uniq`'
 alias emacs='/usr/local/Cellar/emacs/25.1/bin/emacs -nw'
 
