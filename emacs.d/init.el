@@ -18,11 +18,6 @@
 (use-package projectile
   :ensure t)
 
-(setq evil-want-C-i-jump nil)
-
-(use-package evil
-  :ensure t)
-
 (use-package clojure-mode
   :ensure t)
 
@@ -49,11 +44,6 @@
   (global-company-mode))
 
 (add-hook 'clojure-mode-hook #'paredit-mode)
-
-(require 'evil)
-(evil-mode t)
-(add-to-list 'evil-emacs-state-modes 'cider-stacktrace-mode)
-(add-to-list 'evil-emacs-state-modes 'cider-repl-mode)
 
 (require 'helm-config)
 (helm-mode 1)
