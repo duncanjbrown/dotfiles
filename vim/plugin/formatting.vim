@@ -3,3 +3,8 @@
 map Q gq
 
 let g:EditorConfig_core_mode = 'python_external'
+
+au BufEnter *.clj RainbowParenthesesActivate
+au Syntax clojure RainbowParenthesesLoadRound
+au Syntax clojure RainbowParenthesesLoadSquare
+au Syntax clojure RainbowParenthesesLoadBraces

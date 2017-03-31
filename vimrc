@@ -93,6 +93,13 @@ Plug 'janko-m/vim-test'
 " REPL
 Plug 'tpope/vim-fireplace'
 
+" (sexps)
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+" ((((rainbows))))
+Plug 'kien/rainbow_parentheses.vim'
+
 call plug#end()
 
 colorscheme hybrid
