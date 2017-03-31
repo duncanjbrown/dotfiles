@@ -16,6 +16,9 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Surround with (), '' etc
 Plug 'tpope/vim-surround'
 
+" Repeat things achieved by surround
+Plug 'tpope/vim-repeat'
+
 " HUD at bottom
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
