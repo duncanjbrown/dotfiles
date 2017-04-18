@@ -20,6 +20,9 @@ inoremap <C-k>  <Esc>:BD<CR>i
 " do not lose history when leaving a buffer
 set hidden
 
+" Don't show NERDTree help
+let NERDTreeMinimalUI=1
+
 " Spacing between icon and title in NERDTree
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 " No fileicons at top of screen
