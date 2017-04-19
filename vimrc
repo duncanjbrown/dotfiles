@@ -71,9 +71,6 @@ Plug 'mileszs/ack.vim'
 " Visual undo
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 
-" Autoclose parens etc
-Plug 'jiangmiao/auto-pairs'
-
 " Paste with indentation
 Plug 'sickill/vim-pasta'
 
