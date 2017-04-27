@@ -8,5 +8,5 @@ let test#strategy = {
   \ 'file':    'dispatch',
   \ 'suite':   'neovim',
   \}
-let test#ruby#bundle_exec = 1
 
+let test#ruby#rspec#options = '--format progress --no-color'
