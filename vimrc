@@ -55,6 +55,7 @@ Plug 'tpope/vim-dispatch'
 
 " Git tools
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " Enables :Gbrowse for GitHub
 
 " Do.end for ruby
 Plug 'tpope/vim-endwise'
