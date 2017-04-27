@@ -62,12 +62,6 @@ Plug 'tpope/vim-endwise'
 " No need for pastetoggle
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" Search in filenames
-Plug 'ctrlpvim/ctrlp.vim'
-
-" Search in files
-Plug 'mileszs/ack.vim'
-
 " Visual undo
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 
