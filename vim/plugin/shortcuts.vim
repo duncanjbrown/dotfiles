@@ -17,6 +17,10 @@ vnoremap <S-Tab> <
 inoremap <C-c> <Esc>
 imap jj <Esc>
 
+" Fzf
+nnoremap <Leader>c :Commands<CR>
+nnoremap <Leader>f :Ag<CR>
+
 " comment / decomment & normal comment behavior
 vmap <C-m> gc
 

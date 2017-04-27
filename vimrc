@@ -79,6 +79,7 @@ Plug 'ap/vim-css-color'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Pretty icons in nerdtree
 Plug 'ryanoasis/vim-devicons'
