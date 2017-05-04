@@ -35,7 +35,7 @@ values."
      javascript
      markdown
      yaml
-     ruby
+     (ruby :variables ruby-test-runner 'rspec)
      ruby-on-rails
      vimscript
      ;; ----------------------------------------------------------------
