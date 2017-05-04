@@ -322,7 +322,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
    ns-use-srgb-colorspace t
    )
   (setq neo-theme 'icons)
-
+  (setq vc-follow-symlinks t)
   )
 
 (defun dotspacemacs/user-config ()
