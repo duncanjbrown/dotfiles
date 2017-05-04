@@ -19,10 +19,16 @@ test -e "${HOME}/.environment" && source "${HOME}/.environment"
 
 export EDITOR=nvim
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=true
-source "${HOME}/.zsh/iterm2_shell_integration.zsh"
+#source "${HOME}/.zsh/iterm2_shell_integration.zsh"
 source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
 source "${HOME}/.zsh/python"
+
+# Make shell work in Emacs
+if [ -n "$INSIDE_EMACS" ]; then
+  export EDITOR=emacsclient
+  unset zle_bracketed_paste  # This line
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -334,6 +334,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-hl-line-mode -1)
   (define-key evil-normal-state-map (kbd "RET") 'evil-search-highlight-persist-remove-all) 
+  (ansi-color-for-comint-mode-on)
   )
  
 ;; Do not write anything past this comment. This is where Emacs will
