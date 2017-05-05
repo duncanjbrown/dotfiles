@@ -323,6 +323,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
    )
   (setq neo-theme 'icons)
   (setq vc-follow-symlinks t)
+  (setq ruby-test-rspec-options '())
   )
 
 (defun dotspacemacs/user-config ()
