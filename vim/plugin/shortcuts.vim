@@ -19,12 +19,12 @@ inoremap <C-c> <Esc>
 imap jj <Esc>
 
 " Fzf
-nnoremap <Leader>c :Commands<CR>
 nnoremap <Leader>f :Ag<CR>
 nnoremap <C-p> :Files<CR>
 
 " comment / decomment & normal comment behavior
-vmap <C-m> gc
+nnoremap <Leader>c :TComment<CR>
+vnoremap <Leader>c :TComment<CR>
 
 inoremap <C-U> <C-G>u<C-U>
 
