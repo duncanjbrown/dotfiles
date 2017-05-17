@@ -44,6 +44,10 @@ Plug 'qpkorr/vim-bufkill'
 " Linter
 Plug 'neomake/neomake'
 
+" ORG
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+
 " Ruby bindings for plugins
 Plug 'vim-ruby/vim-ruby'
 
@@ -56,6 +60,7 @@ Plug 'tpope/vim-dispatch'
 " Git tools
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " Enables :Gbrowse for GitHub
+Plug 'junegunn/gv.vim'
 
 " Do.end for ruby
 Plug 'tpope/vim-endwise'
@@ -75,6 +80,9 @@ Plug 'ap/vim-css-color'
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Registers and macros
+Plug 'junegunn/vim-peekaboo'
 
 " Pretty icons in nerdtree
 Plug 'ryanoasis/vim-devicons'
@@ -152,6 +160,8 @@ set splitbelow
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
 
 set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
+
+let g:peekaboo_window = 'vertical botright 80new'
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
