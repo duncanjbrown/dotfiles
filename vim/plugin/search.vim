@@ -1,5 +1,5 @@
 " Highlighting in quickfix
-hi Search cterm=NONE ctermfg=none ctermbg=darkblue
+" hi Search cterm=NONE ctermfg=none ctermbg=blue
 
 set incsearch
 if maparg('<C-L>', 'n') ==# ''
