@@ -1,4 +1,5 @@
-let mapleader = ','
+let mapleader = ' '
+let maplocalleader = ' '
 
 " save with ,s
 nnoremap <Leader>s :w<CR>
