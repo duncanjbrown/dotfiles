@@ -110,9 +110,11 @@ call plug#end()
 
 colorscheme nord
 set nocompatible
-filetype off
 
 filetype plugin indent on
+
+" never fold git commit details
+autocmd FileType git set foldlevel=1
 
 syntax enable
 
