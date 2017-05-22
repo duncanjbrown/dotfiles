@@ -107,7 +107,7 @@ Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
 
-colorscheme hybrid
+colorscheme nord
 set nocompatible
 filetype off
 
