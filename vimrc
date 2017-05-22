@@ -89,6 +89,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'flazz/vim-colorschemes'
+Plug 'arcticicestudio/nord-vim'
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'kchmck/vim-coffee-script'
