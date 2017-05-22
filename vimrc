@@ -59,6 +59,7 @@ Plug 'tpope/vim-dispatch'
 
 " Git tools
 Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit'
 Plug 'tpope/vim-rhubarb' " Enables :Gbrowse for GitHub
 Plug 'junegunn/gv.vim'
 
