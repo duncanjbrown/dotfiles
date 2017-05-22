@@ -111,7 +111,6 @@ colorscheme nord
 set nocompatible
 filetype off
 
-set background=dark
 filetype plugin indent on
 
 syntax enable
