@@ -106,6 +106,9 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 " ((((rainbows))))
 Plug 'kien/rainbow_parentheses.vim'
 
+" Distration-free mode
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 colorscheme nord
