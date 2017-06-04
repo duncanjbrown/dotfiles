@@ -89,7 +89,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 
 " REPL
-Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " (sexps)
 Plug 'guns/vim-sexp'
