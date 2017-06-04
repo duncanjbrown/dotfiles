@@ -21,7 +21,6 @@ Plug 'tpope/vim-repeat'
 
 " HUD at bottom
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
@@ -89,7 +88,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'flazz/vim-colorschemes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'terryma/vim-multiple-cursors'
 
