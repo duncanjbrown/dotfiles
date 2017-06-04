@@ -101,6 +101,8 @@ Plug 'kien/rainbow_parentheses.vim'
 " Distration-free mode
 Plug 'junegunn/goyo.vim'
 
+Plug 'wellle/targets.vim'
+
 call plug#end()
 
 colorscheme nord
