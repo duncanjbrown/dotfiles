@@ -68,14 +68,8 @@ Plug 'tpope/vim-endwise'
 " No need for pastetoggle
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" Visual undo
-Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-
 " Paste with indentation
 Plug 'sickill/vim-pasta'
-
-" Display CSS colours
-Plug 'ap/vim-css-color'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
