@@ -101,7 +101,9 @@ Plug 'kien/rainbow_parentheses.vim'
 " Distration-free mode
 Plug 'junegunn/goyo.vim'
 
+" din(, dil(, cna, etc  (next, last parens, args etc)
 Plug 'wellle/targets.vim'
+Plug 'kassio/neoterm'
 
 call plug#end()
 
