@@ -135,6 +135,7 @@ set laststatus=2
 set ruler " line and column under cursor
 set showcmd " print building command on lower RHS
 set wildmenu
+set cursorline " highlight the current line
 
 set autoread  " reload changed files
 
