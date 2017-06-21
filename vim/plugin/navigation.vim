@@ -22,6 +22,7 @@ set hidden
 
 " Don't show NERDTree help
 let NERDTreeMinimalUI=1
+let g:NERDTreeQuitOnOpen = 1
 
 " Spacing between icon and title in NERDTree
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
