@@ -107,6 +107,7 @@ Plug 'kassio/neoterm'
 
 call plug#end()
 
+let g:nord_italic_comments = 1
 colorscheme nord
 set nocompatible
 
