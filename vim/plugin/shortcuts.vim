@@ -7,7 +7,6 @@ nnoremap <Leader>s :w<CR>
 " prompt with \
 map \ :
 
-noremap  <Leader>g :GitGutterToggle<CR>
 noremap  <Leader>G :GV<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <S-u> :GundoToggle<CR>
@@ -22,6 +21,7 @@ imap jj <Esc>
 " Fzf
 nnoremap <Leader>f :Ag<CR>
 nnoremap <C-p> :Files<CR>
+noremap  <Leader>F :Tags<CR>
 
 " comment / decomment & normal comment behavior
 nnoremap <Leader>c :TComment<CR>
