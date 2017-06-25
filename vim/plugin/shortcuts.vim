@@ -20,6 +20,7 @@ imap jj <Esc>
 
 " Fzf
 nnoremap <Leader>f :Ag<CR>
+nnoremap <Leader>b :Buffers<CR>
 nnoremap <C-p> :Files<CR>
 
 " comment / decomment & normal comment behavior
