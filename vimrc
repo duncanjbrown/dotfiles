@@ -21,7 +21,6 @@ Plug 'tpope/vim-repeat'
 
 " HUD at bottom
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
@@ -69,14 +68,8 @@ Plug 'tpope/vim-endwise'
 " No need for pastetoggle
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" Visual undo
-Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-
 " Paste with indentation
 Plug 'sickill/vim-pasta'
-
-" Display CSS colours
-Plug 'ap/vim-css-color'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -89,7 +82,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'flazz/vim-colorschemes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -97,7 +89,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 
 " REPL
-Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " (sexps)
 Plug 'guns/vim-sexp'
@@ -109,8 +101,13 @@ Plug 'kien/rainbow_parentheses.vim'
 " Distration-free mode
 Plug 'junegunn/goyo.vim'
 
+" din(, dil(, cna, etc  (next, last parens, args etc)
+Plug 'wellle/targets.vim'
+Plug 'kassio/neoterm'
+
 call plug#end()
 
+let g:nord_italic_comments = 1
 colorscheme nord
 set nocompatible
 
@@ -139,6 +136,7 @@ set laststatus=2
 set ruler " line and column under cursor
 set showcmd " print building command on lower RHS
 set wildmenu
+set cursorline " highlight the current line
 
 set autoread  " reload changed files
 
@@ -163,7 +161,12 @@ set completeopt=menuone,longest,preview
 set splitright
 set splitbelow
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
+" Keep cursor away from the edge when scrolling
+set scrolloff=12
+
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+  \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+  \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
 

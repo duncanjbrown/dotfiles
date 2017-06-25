@@ -5,4 +5,5 @@ nmap <silent> <leader>e :TestLast<CR>
 
 let test#strategy = 'dispatch'
 
-"let test#ruby#rspec#options = '--format progress --no-color'
+let g:dispatch_compilers = {
+      \ 'bundle exec': ''}
