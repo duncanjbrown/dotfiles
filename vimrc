@@ -105,6 +105,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'wellle/targets.vim'
 Plug 'kassio/neoterm'
 
+" Delete all other buffers
+Plug 'schickling/vim-bufonly'
+
 call plug#end()
 
 let g:nord_italic_comments = 1
