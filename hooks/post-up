@@ -26,6 +26,10 @@ else
   show_done_message
 fi
 
+echo "Enabling italics in tmux"
+tic ~/terminal/screen-256color-italic.terminfo
+show_done_message
+
 echo "Installing vim plugins"
 nvim +PlugUpdate
 show_done_message
