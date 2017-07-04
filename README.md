@@ -31,3 +31,5 @@ Code Pro Nerd Font.
 ## Options
 
 If you have a file called `.environment` in `~`, it will be sourced from zshrc.
+
+To enable italics in the terminal, use the file in ~/terminal and follow the instructions here https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/.
