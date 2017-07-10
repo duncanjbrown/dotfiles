@@ -32,3 +32,7 @@ inoremap <C-U> <C-G>u<C-U>
 
 " Delete all the buffers except this one
 nnoremap <Leader>kk :BufOnly<CR>
+
+nnoremap <Leader>w :call fzf#vim#ag(expand('<cword>'))<CR>
+nnoremap <Leader>W :call fzf#vim#tags(expand('<cword>'))<CR>
+
