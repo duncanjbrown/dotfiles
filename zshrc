@@ -23,6 +23,7 @@ source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
 source "${HOME}/.zsh/python"
 source "${HOME}/.zsh/base16"
+source "${HOME}/.zsh/fzf"
 
 # Make shell work in Emacs
 if [ -n "$INSIDE_EMACS" ]; then
