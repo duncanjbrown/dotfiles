@@ -84,6 +84,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'kchmck/vim-coffee-script'
@@ -112,7 +113,8 @@ Plug 'schickling/vim-bufonly'
 call plug#end()
 
 let g:nord_italic_comments = 1
-colorscheme nord
+let base16colorspace=256
+colorscheme base16-default-dark
 set nocompatible
 
 filetype plugin indent on
