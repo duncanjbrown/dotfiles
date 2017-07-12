@@ -9,7 +9,6 @@ map \ :
 
 noremap  <Leader>G :GV<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <S-u> :GundoToggle<CR>
 
 vnoremap <Tab> >
 vnoremap <S-Tab> <
