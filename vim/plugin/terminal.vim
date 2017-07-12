@@ -1,10 +1,11 @@
 autocmd TermOpen * set bufhidden=delete
 
 nnoremap <Leader>T :split <bar> terminal<CR>
-let g:neoterm_automap_keys = '§§'
 let g:neoterm_autoscroll = '1'
 
-nnoremap <Leader>1 :T 
+command! -nargs=+ TT Topen | T <args>
+
+nnoremap § :TT 
 vnoremap <Leader>2 :TREPLSendSelection<CR>
 nnoremap <Leader>3 :TREPLSendLine<CR>
 nnoremap <Leader>4 :Tmap 
