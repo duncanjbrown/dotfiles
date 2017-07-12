@@ -7,6 +7,7 @@ nnoremap <Leader>s :w<CR>
 " prompt with \
 map \ :
 
+noremap  <Leader>g :Gstatus<CR>
 noremap  <Leader>G :GV<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
