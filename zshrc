@@ -18,7 +18,7 @@ source "${HOME}/.bin/tmuxinator.zsh"
 test -e "${HOME}/.environment" && source "${HOME}/.environment"
 
 export EDITOR=nvim
-#source "${HOME}/.zsh/iterm2_shell_integration.zsh"
+source "${HOME}/.zsh/iterm2_shell_integration.zsh"
 source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
 source "${HOME}/.zsh/python"
