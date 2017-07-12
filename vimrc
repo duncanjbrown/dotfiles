@@ -21,6 +21,7 @@ Plug 'tpope/vim-repeat'
 
 " HUD at bottom
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
@@ -83,7 +84,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'arcticicestudio/nord-vim'
 Plug 'chriskempson/base16-vim'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -112,10 +112,13 @@ Plug 'schickling/vim-bufonly'
 
 call plug#end()
 
-let g:nord_italic_comments = 1
 let base16colorspace=256
-colorscheme base16-default-dark
 set nocompatible
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 filetype plugin indent on
 
