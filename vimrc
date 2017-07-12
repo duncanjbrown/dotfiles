@@ -64,6 +64,7 @@ Plug 'tpope/vim-rhubarb' " Enables :Gbrowse for GitHub
 Plug 'junegunn/gv.vim'
 Plug 'idanarye/vim-merginal' " branching for fugitive
 
+Plug 'edkolev/tmuxline.vim'
 " Do.end for ruby
 Plug 'tpope/vim-endwise'
 
