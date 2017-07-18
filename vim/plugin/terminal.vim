@@ -3,6 +3,7 @@ autocmd TermOpen * set bufhidden=delete
 nnoremap <Leader>T :split <bar> terminal<CR>
 let g:neoterm_autoscroll = '1'
 let g:neoterm_automap_keys = '<F5>'
+let g:neoterm_size = 16
 
 command! -nargs=+ TT Topen | T <args>
 
