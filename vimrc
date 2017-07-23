@@ -93,6 +93,10 @@ Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
 
+" ae and ie for the whole buffer
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user'
+
 " Distration-free mode
 Plug 'junegunn/goyo.vim'
 
