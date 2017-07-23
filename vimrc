@@ -87,15 +87,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 
-" REPL
+" REPL, sexps, rainbows
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" (sexps)
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-
-" ((((rainbows))))
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'guns/vim-sexp', { 'for': 'clojure' }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
+Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
 
 " Distration-free mode
 Plug 'junegunn/goyo.vim'
