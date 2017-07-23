@@ -77,9 +77,6 @@ Plug 'sickill/vim-pasta'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Registers and macros
-Plug 'junegunn/vim-peekaboo'
-
 " Pretty icons in nerdtree
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -178,8 +175,6 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
-
-let g:peekaboo_window = 'vertical botright 80new'
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
