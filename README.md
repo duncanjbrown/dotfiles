@@ -3,6 +3,7 @@
 - iTerm2
 - tmux 2.4
 - ZSH/oh-my-zshell
+- Base16 Shell [repo](https://github.com/chriskempson/base16-shell)
 - For Ruby: rbenv
 - For JS: yarn
 - neovim
