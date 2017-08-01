@@ -88,10 +88,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 
 " REPL, sexps, rainbows
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': ['clojure', 'clojurescript'] }
+Plug 'kien/rainbow_parentheses.vim', { 'for': ['clojure', 'clojurescript'] }
+Plug 'bhurlow/vim-parinfer', { 'for': ['clojure', 'clojurescript'] }
 
 " ae and ie for the whole buffer
 Plug 'kana/vim-textobj-entire'
