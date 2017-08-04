@@ -51,6 +51,9 @@ Plug 'tpope/vim-speeddating'
 " Ruby bindings for plugins
 Plug 'vim-ruby/vim-ruby'
 
+" e.g. vir to select the inside of a block
+Plug 'nelstrom/vim-textobj-rubyblock'
+
 " Rails shortcuts
 Plug 'tpope/vim-rails'
 
