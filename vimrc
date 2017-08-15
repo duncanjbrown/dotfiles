@@ -109,6 +109,8 @@ Plug 'kassio/neoterm'
 " Delete all other buffers
 Plug 'schickling/vim-bufonly'
 
+Plug 'terryma/vim-smooth-scroll'
+
 call plug#end()
 
 let base16colorspace=256
@@ -176,9 +178,14 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
+" These must be set after Plugging the terryma/vim-smooth-scroll plugin
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+
 set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
