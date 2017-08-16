@@ -186,6 +186,8 @@ let g:fold_rspec_foldcolumn = 4      " shows a 4-character column on the lefthan
 " let g:fold_rspec_foldclose = 'all'   " closes folds automatically when the cursor is moved out of them (only applies to folds deeper than 'foldlevel')
 " let g:fold_rspec_foldminlines = 3    " disables closing of folds containing two lines or fewer
 
+highlight Comment cterm=italic
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
