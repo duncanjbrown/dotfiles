@@ -24,12 +24,6 @@ source "${HOME}/.zsh/python"
 source "${HOME}/.zsh/base16"
 source "${HOME}/.zsh/fzf"
 
-# Make shell work in Emacs
-if [ -n "$INSIDE_EMACS" ]; then
-  export EDITOR=emacsclient
-  unset zle_bracketed_paste  # This line
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GOPATH=$HOME/go
