@@ -27,7 +27,8 @@ else
 fi
 
 echo "Enabling italics in tmux"
-tic ~/terminal/screen-256color-italic.terminfo
+tic ~/terminal/xterm-256color.terminfo
+tic ~/terminal/tmux-256color-italic.terminfo
 show_done_message
 
 echo "Installing vim plugins"
