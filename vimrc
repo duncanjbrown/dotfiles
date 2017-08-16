@@ -1,8 +1,4 @@
 function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
     !./install.py
   endif
@@ -129,14 +125,12 @@ filetype plugin indent on
 " never fold git commit details
 autocmd FileType git set foldlevel=1
 
-syntax enable
+syntax enable " enable syntax highlighting
 
-" Use :help 'option' to see the documentation for the given option.
 set autoindent
 set backspace=indent,eol,start
 set showmatch " highlight matching parens
-set showmode
-set smarttab
+set showmode " display the mode
 
 set nrformats-=octal " Do not permit octals when adding using <c-A> and <c-X>
 set shiftround " Round indents to a multiple of shiftwidth
@@ -145,7 +139,7 @@ set shiftround " Round indents to a multiple of shiftwidth
 set ttimeout
 set ttimeoutlen=50
 
-set laststatus=2
+set laststatus=2 " always show a statusline in inactive windows
 set ruler " line and column under cursor
 set showcmd " print building command on lower RHS
 set wildmenu
@@ -158,7 +152,6 @@ set tabstop=2 shiftwidth=2 expandtab
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set list
 
-" In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
 endif
