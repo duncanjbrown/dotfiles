@@ -21,6 +21,7 @@ local color0E='#C594C5'
 local color0F='#AB7967'
 
 export FZF_DEFAULT_OPTS="
+  --black
   --height 40% --border
   --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
