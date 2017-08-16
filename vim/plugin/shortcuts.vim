@@ -36,3 +36,5 @@ nnoremap <Leader>kk :BufOnly<CR>
 nnoremap <Leader>w :call fzf#vim#ag(expand('<cword>'))<CR>
 nnoremap <Leader>W :call fzf#vim#tags(expand('<cword>'))<CR>
 
+nnoremap <Tab> %
+vnoremap <Tab> %
