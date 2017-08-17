@@ -86,9 +86,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 
-" Fold RSpec specs
-Plug 'rlue/vim-fold-rspec'
-
 " REPL, sexps, rainbows
 Plug 'tpope/vim-fireplace', { 'for': ['clojure', 'clojurescript'] }
 Plug 'kien/rainbow_parentheses.vim', { 'for': ['clojure', 'clojurescript'] }
@@ -179,12 +176,6 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 
 set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
-
-" let g:fold_rspec_foldenable = 0      " disables folding (toggle with `zi`)
-let g:fold_rspec_foldlevel = 3       " sets initial open/closed state of all folds (open unless nested more than two levels deep)
-let g:fold_rspec_foldcolumn = 4      " shows a 4-character column on the lefthand side of the window displaying the document's fold structure
-" let g:fold_rspec_foldclose = 'all'   " closes folds automatically when the cursor is moved out of them (only applies to folds deeper than 'foldlevel')
-" let g:fold_rspec_foldminlines = 3    " disables closing of folds containing two lines or fewer
 
 highlight Comment cterm=italic
 
