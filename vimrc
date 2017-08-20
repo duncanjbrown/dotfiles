@@ -28,7 +28,7 @@ Plug 'tommcdo/vim-exchange'
 " Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
-" Comments 
+" Comments
 Plug 'tomtom/tcomment_vim'
 
 " Take editorconfig into account
@@ -175,7 +175,7 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 
-set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14 
+set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14
 
 highlight Comment cterm=italic
 
