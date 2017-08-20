@@ -10,6 +10,7 @@
 - pyenv plus python 2.7 and 3.x for Vim plugins
 - rcm: https://github.com/thoughtbot/rcm
 - fzf: https://github.com/junegunn/fzf
+- Z: https://github.com/rupa/z/
 
 ### Pyenv
 

@@ -29,4 +29,7 @@ source "${HOME}/.zsh/fzf"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# Z
+. /usr/local/etc/profile.d/z.sh
+
 export PATH="/usr/local/sbin:$PATH"
