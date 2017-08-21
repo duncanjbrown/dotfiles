@@ -179,6 +179,10 @@ set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14
 
 highlight Comment cterm=italic
 
+" don't set mappings on <Leader>b etc
+" https://github.com/qpkorr/vim-bufkill/issues/14
+let g:BufKillCreateMappings = 0
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
