@@ -20,7 +20,7 @@ imap jj <Esc>
 
 " Fzf
 nnoremap <Leader>f :Ag<CR>
-nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>j :Buffers<CR>
 nnoremap <C-p> :Files<CR>
 noremap  <Leader>F :Tags<CR>
 
