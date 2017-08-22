@@ -7,3 +7,6 @@ let g:airline#extensions#tabline#show_tab_type = 0
 
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr=''
+
+let g:airline_section_a = '%{airline#util#wrap(airline#extensions#branch#get_head(),0)}'
+let g:airline_section_b = ''
