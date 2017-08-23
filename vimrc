@@ -7,7 +7,7 @@ endfunction
 call plug#begin()
 
 " File browser
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind'] }
 
 " Surround with (), '' etc
 Plug 'tpope/vim-surround'
