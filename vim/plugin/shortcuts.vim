@@ -10,6 +10,7 @@ map \ :
 noremap  <Leader>g :Gstatus<CR>
 noremap  <Leader>G :GV<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>N :NERDTreeFind<CR>
 
 vnoremap <Tab> >
 vnoremap <S-Tab> <
