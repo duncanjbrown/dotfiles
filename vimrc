@@ -22,9 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
 
-" cx and cxx
-Plug 'tommcdo/vim-exchange'
-
 " Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
@@ -42,7 +39,6 @@ Plug 'neomake/neomake'
 
 " ORG
 Plug 'jceb/vim-orgmode'
-Plug 'tpope/vim-speeddating'
 
 " Ruby bindings for plugins
 Plug 'vim-ruby/vim-ruby'
@@ -81,7 +77,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'chriskempson/base16-vim'
-Plug 'terryma/vim-multiple-cursors'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
