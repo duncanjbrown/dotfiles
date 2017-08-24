@@ -93,8 +93,7 @@ Plug 'kana/vim-textobj-user'
 " Distration-free mode
 Plug 'junegunn/goyo.vim'
 
-" din(, dil(, cna, etc  (next, last parens, args etc)
-Plug 'wellle/targets.vim'
+" Use a terminal as a REPL
 Plug 'kassio/neoterm'
 
 " Delete all other buffers
@@ -152,6 +151,8 @@ set noswapfile
 set fileformats=unix,dos,mac
 
 set completeopt=menuone,longest,preview
+
+set inccommand=split
 
 " Split to the right, and below, not to the left and above
 set splitright
