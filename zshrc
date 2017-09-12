@@ -23,6 +23,7 @@ source "${HOME}/.zsh/functions"
 source "${HOME}/.zsh/python"
 source "${HOME}/.zsh/base16"
 source "${HOME}/.zsh/fzf"
+source "${HOME}/.zsh/ssh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
