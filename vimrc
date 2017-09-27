@@ -158,6 +158,9 @@ set inccommand=split
 set splitright
 set splitbelow
 
+" Ever-living undo
+set undofile
+
 " Keep cursor away from the edge when scrolling
 set scrolloff=12
 
