@@ -99,6 +99,9 @@ Plug 'kassio/neoterm'
 " Delete all other buffers
 Plug 'schickling/vim-bufonly'
 
+" Varnish
+Plug 'smerrill/vcl-vim-plugin'
+
 call plug#end()
 
 let base16colorspace=256
