@@ -1,0 +1,4 @@
+--regex-ruby=/^[ \t]*describe ['"](.*)['"] do/\1/d,describes/
+--regex-ruby=/^[ \t]*context ['"](.*)['"] do/\1/C,contexts/
+--regex-ruby=/^[ \t]*scenario ['"](.*)['"] do/\1/C,contexts/
+--regex-ruby=/^[ \t]*it ['"](.*)['"] do/\1/e,examples/
