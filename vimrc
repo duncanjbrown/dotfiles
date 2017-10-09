@@ -6,9 +6,6 @@ endfunction
 
 call plug#begin()
 
-" File browser
-Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind'] }
-
 " Surround with (), '' etc
 Plug 'tpope/vim-surround'
 
@@ -102,6 +99,11 @@ Plug 'schickling/vim-bufonly'
 " Varnish
 Plug 'smerrill/vcl-vim-plugin'
 
+" Rangerrrr
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim' " dependency of Ranger.vim
+
+
 call plug#end()
 
 let base16colorspace=256
@@ -178,9 +180,12 @@ highlight Comment cterm=italic
 " don't set mappings on <Leader>b etc
 " https://github.com/qpkorr/vim-bufkill/issues/14
 let g:BufKillCreateMappings = 0
+" dont remap leader-f to ranger
+let g:ranger_map_keys = 0
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
 

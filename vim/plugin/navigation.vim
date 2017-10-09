@@ -4,8 +4,6 @@ augroup qf
   autocmd FileType qf set nobuflisted
 augroup END
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " Exclude terminals from bufferlist
 autocmd TermOpen * set nobuflisted
 
@@ -22,10 +20,6 @@ inoremap <C-k>  <Esc>:BD<CR>i
 
 " do not lose history when leaving a buffer
 set hidden
-
-" Don't show NERDTree help
-let NERDTreeMinimalUI=1
-let g:NERDTreeQuitOnOpen = 1
 
 " Spacing between icon and title in NERDTree
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
