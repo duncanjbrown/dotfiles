@@ -96,8 +96,9 @@ Plug 'kassio/neoterm'
 " Delete all other buffers
 Plug 'schickling/vim-bufonly'
 
-" Varnish
+" Ops
 Plug 'smerrill/vcl-vim-plugin'
+Plug 'chr4/nginx.vim'
 
 " Rangerrrr
 Plug 'francoiscabrol/ranger.vim'
