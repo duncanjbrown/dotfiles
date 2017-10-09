@@ -104,6 +104,8 @@ Plug 'chr4/nginx.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim' " dependency of Ranger.vim
 
+" ]I uses quickfix
+Plug 'romainl/vim-qlist'
 
 call plug#end()
 
