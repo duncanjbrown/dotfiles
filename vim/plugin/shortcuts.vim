@@ -9,8 +9,8 @@ map \ :
 
 noremap  <Leader>g :Gstatus<CR>
 noremap  <Leader>G :GV<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>N :NERDTreeFind<CR>
+
+nnoremap <Leader>n :RangerWorkingDirectory<CR>
 
 vnoremap <Tab> >
 vnoremap <S-Tab> <
