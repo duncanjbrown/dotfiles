@@ -48,7 +48,6 @@ Plug 'tpope/vim-dispatch'
 " Git tools
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
-Plug 'tpope/vim-rhubarb' " Enables :Gbrowse for GitHub
 Plug 'junegunn/gv.vim'
 Plug 'idanarye/vim-merginal' " branching for fugitive
 
@@ -65,10 +64,6 @@ Plug 'sickill/vim-pasta'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Pretty icons in nerdtree
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 Plug 'chriskempson/base16-vim'
 
 Plug 'kchmck/vim-coffee-script'
@@ -82,9 +77,6 @@ Plug 'bhurlow/vim-parinfer', { 'for': ['clojure', 'clojurescript'] }
 " ae and ie for the whole buffer
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
-
-" Distration-free mode
-Plug 'junegunn/goyo.vim'
 
 " Use a terminal as a REPL
 Plug 'kassio/neoterm'
