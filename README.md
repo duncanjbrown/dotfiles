@@ -1,7 +1,6 @@
 ## Dependencies
 
-- Alacritty, which you need to compile from source
-- tmux 2.5, from homebrew, plus `reattach-to-user-namespace`
+- tmux plus `reattach-to-user-namespace`
 - ZSH/oh-my-zshell
 - Base16 Shell [repo](https://github.com/chriskempson/base16-shell)
 - For Ruby: rbenv
