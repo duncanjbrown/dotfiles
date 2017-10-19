@@ -6,104 +6,62 @@ endfunction
 
 call plug#begin()
 
-" Surround with (), '' etc
-Plug 'tpope/vim-surround'
-
-" Repeat things achieved by surround
-Plug 'tpope/vim-repeat'
-
-" HUD at bottom
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Show Git status in page gutter
-Plug 'airblade/vim-gitgutter'
-
-" Code completion
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-
-" Comments
-Plug 'tomtom/tcomment_vim'
-
-" Take editorconfig into account
-Plug 'editorconfig/editorconfig-vim'
-
-" Permit splits to remain when killing buffer
-Plug 'qpkorr/vim-bufkill'
-
-" Linter
-Plug 'neomake/neomake'
-
-" ORG
-Plug 'jceb/vim-orgmode'
-
-" Ruby bindings for plugins
-Plug 'vim-ruby/vim-ruby'
-
-" e.g. vir to select the inside of a block
-Plug 'nelstrom/vim-textobj-rubyblock'
-
-" Rails shortcuts
-Plug 'tpope/vim-rails'
-
-" Enables vim-rspec to run in a tmux split
-Plug 'tpope/vim-dispatch'
-
-" Git tools
+" Git
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
-Plug 'tpope/vim-rhubarb' " Enables :Gbrowse for GitHub
 Plug 'junegunn/gv.vim'
 Plug 'idanarye/vim-merginal' " branching for fugitive
+Plug 'airblade/vim-gitgutter'
 
-" Do.end for ruby
-Plug 'tpope/vim-endwise'
-
-" No need for pastetoggle
-Plug 'ConradIrwin/vim-bracketed-paste'
-
-" Paste with indentation
-Plug 'sickill/vim-pasta'
-
-" Fuzzy Finder
+" FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Pretty icons in nerdtree
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+" Themes
 Plug 'chriskempson/base16-vim'
 
-Plug 'kchmck/vim-coffee-script'
-Plug 'janko-m/vim-test'
+" Editing
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'sickill/vim-pasta'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tomtom/tcomment_vim'
 
-" REPL, sexps, rainbows
+" ### External processes
+Plug 'kassio/neoterm'
+Plug 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
+Plug 'neomake/neomake'
+Plug 'tpope/vim-eunuch'
+
+" Buffers
+Plug 'schickling/vim-bufonly'
+Plug 'qpkorr/vim-bufkill'
+
+" Syntax and language
+Plug 'smerrill/vcl-vim-plugin'
+Plug 'chr4/nginx.vim'
 Plug 'tpope/vim-fireplace', { 'for': ['clojure', 'clojurescript'] }
 Plug 'kien/rainbow_parentheses.vim', { 'for': ['clojure', 'clojurescript'] }
 Plug 'bhurlow/vim-parinfer', { 'for': ['clojure', 'clojurescript'] }
-
-" ae and ie for the whole buffer
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-user'
-
-" Distration-free mode
-Plug 'junegunn/goyo.vim'
-
-" Use a terminal as a REPL
-Plug 'kassio/neoterm'
-
-" Delete all other buffers
-Plug 'schickling/vim-bufonly'
-
-" Ops
-Plug 'smerrill/vcl-vim-plugin'
-Plug 'chr4/nginx.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-endwise' " For Ruby
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'jceb/vim-orgmode'
+Plug 'editorconfig/editorconfig-vim'
 
 " Rangerrrr
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim' " dependency of Ranger.vim
 
+" Quickfix
+Plug 'romainl/vim-qlist'
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
