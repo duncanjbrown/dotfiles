@@ -12,10 +12,6 @@ Plug 'tpope/vim-surround'
 " Repeat things achieved by surround
 Plug 'tpope/vim-repeat'
 
-" HUD at bottom
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
 " Show Git status in page gutter
 Plug 'airblade/vim-gitgutter'
 
