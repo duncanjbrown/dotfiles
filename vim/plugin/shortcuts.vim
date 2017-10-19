@@ -10,7 +10,7 @@ map \ :
 noremap  <Leader>g :Gstatus<CR>
 noremap  <Leader>G :GV<CR>
 
-nnoremap <Leader>n :RangerWorkingDirectory<CR>
+nnoremap <Leader>n :RangerCurrentFile<CR>
 
 vnoremap <Tab> >
 vnoremap <S-Tab> <
