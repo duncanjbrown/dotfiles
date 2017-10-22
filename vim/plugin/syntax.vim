@@ -7,3 +7,5 @@ command Rubofix ! bundle exec rubocop -a %
 
 " let g:neomake_open_list = 2
 let g:neomake_ruby_enabled_makers = ['rubocop']
+call neomake#configure#automake('rw', 1000)
+
