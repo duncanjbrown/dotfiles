@@ -12,9 +12,6 @@ noremap  <Leader>G :GV<CR>
 
 nnoremap <Leader>n :RangerCurrentFile<CR>
 
-vnoremap <Tab> >
-vnoremap <S-Tab> <
-
 " exit insert mode
 inoremap <C-c> <Esc>
 imap jj <Esc>
