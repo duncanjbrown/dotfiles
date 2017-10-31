@@ -29,6 +29,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
+Plug 'haya14busa/incsearch.vim'
 
 " ### External processes
 Plug 'kassio/neoterm'
