@@ -28,6 +28,8 @@ vnoremap <Leader>c :TComment<CR>
 
 inoremap <C-U> <C-G>u<C-U>
 
+nnoremap <Leader>U :GundoToggle<CR>
+
 " Delete all the buffers except this one
 nnoremap <Leader>kk :BufOnly<CR>
 
