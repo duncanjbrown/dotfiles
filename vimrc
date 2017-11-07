@@ -30,6 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'sjl/gundo.vim'
 
 " ### External processes
 Plug 'kassio/neoterm'
