@@ -96,7 +96,6 @@ set ttimeoutlen=50
 
 set laststatus=2 " always show a statusline in inactive windows
 set ruler " line and column under cursor
-set showcmd " print building command on lower RHS
 set wildmenu
 set cursorline " highlight the current line
 
@@ -126,6 +125,9 @@ set splitbelow
 
 " Ever-living undo
 set undofile
+
+" don't bother with showcmd
+set noshowcmd
 
 " Keep cursor away from the edge when scrolling
 set scrolloff=12
