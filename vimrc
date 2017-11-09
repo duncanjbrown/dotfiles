@@ -55,8 +55,10 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'tpope/vim-vinegar'
 " Rangerrrr
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim' " dependency of Ranger.vim
