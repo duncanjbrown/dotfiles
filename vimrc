@@ -125,6 +125,9 @@ set inccommand=split
 set splitright
 set splitbelow
 
+" Expand tabs by default
+set expandtab
+
 " Ever-living undo
 set undofile
 
