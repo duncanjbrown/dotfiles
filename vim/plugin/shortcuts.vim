@@ -12,9 +12,6 @@ noremap  <Leader>G :GV<CR>
 
 nnoremap <Leader>n :RangerCurrentFile<CR>
 
-vnoremap <Tab> >
-vnoremap <S-Tab> <
-
 " exit insert mode
 inoremap <C-c> <Esc>
 imap jj <Esc>
@@ -30,6 +27,8 @@ nnoremap <Leader>c :TComment<CR>
 vnoremap <Leader>c :TComment<CR>
 
 inoremap <C-U> <C-G>u<C-U>
+
+nnoremap <Leader>U :GundoToggle<CR>
 
 " Delete all the buffers except this one
 nnoremap <Leader>kk :BufOnly<CR>

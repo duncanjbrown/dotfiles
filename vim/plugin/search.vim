@@ -7,12 +7,15 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 " Press enter to unhighlight searches
-nnoremap <silent> <CR> :noh<CR><CR>
+nnoremap <silent> <CR> :noh<CR>
 
 " in visual mode, press // to search highlighted text
 vnoremap // y/<C-R>"<CR>
 
-
 set hlsearch
 set ignorecase
 set smartcase
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)

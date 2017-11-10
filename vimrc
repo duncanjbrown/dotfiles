@@ -29,6 +29,8 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'sjl/gundo.vim'
 
 " ### External processes
 Plug 'kassio/neoterm'
@@ -53,8 +55,10 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'tpope/vim-vinegar'
 " Rangerrrr
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim' " dependency of Ranger.vim
@@ -94,7 +98,6 @@ set ttimeoutlen=50
 
 set laststatus=2 " always show a statusline in inactive windows
 set ruler " line and column under cursor
-set showcmd " print building command on lower RHS
 set wildmenu
 set cursorline " highlight the current line
 
@@ -125,14 +128,15 @@ set splitbelow
 " Ever-living undo
 set undofile
 
+" don't bother with showcmd
+set noshowcmd
+
 " Keep cursor away from the edge when scrolling
 set scrolloff=12
 
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
-
-set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h14
 
 highlight Comment cterm=italic
 
