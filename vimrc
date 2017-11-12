@@ -154,4 +154,17 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
+let g:clipboard = {
+      \   'name': 'tmuxClipboard',
+      \   'copy': {
+      \      '+': 'tmux load-buffer -',
+      \      '*': 'pbcopy',
+      \    },
+      \   'paste': {
+      \      '+': 'tmux save-buffer -',
+      \      '*': 'pbpaste',
+      \   },
+      \   'cache_enabled': 1,
+      \ }
 
+set clipboard=unnamedplus
