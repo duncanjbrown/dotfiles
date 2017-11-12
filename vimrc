@@ -149,11 +149,6 @@ let g:BufKillCreateMappings = 0
 " dont remap leader-f to ranger
 let g:ranger_map_keys = 0
 
-" this machine config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
-
 let g:clipboard = {
       \   'name': 'tmuxClipboard',
       \   'copy': {
@@ -168,3 +163,10 @@ let g:clipboard = {
       \ }
 
 set clipboard=unnamedplus
+
+au TermOpen * setlocal nonumber norelativenumber
+
+" this machine config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
