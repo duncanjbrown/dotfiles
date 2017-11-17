@@ -8,7 +8,6 @@ alias bopen="bundle open"
 alias be="bundle exec"
 alias r="bundle exec rubocop && bundle exec rspec"
 alias fix='$EDITOR `git diff --name-only | uniq`'
-alias emacs='/usr/local/Cellar/emacs/25.1/bin/emacs -nw'
 alias s='tmux attach-session'
 
 newfiles() {
