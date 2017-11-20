@@ -166,6 +166,10 @@ set clipboard=unnamedplus
 
 au TermOpen * setlocal nonumber norelativenumber
 
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
