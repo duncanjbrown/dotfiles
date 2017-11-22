@@ -32,7 +32,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'sjl/gundo.vim'
 
-" ### External processes
+" External processes
 Plug 'kassio/neoterm'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
@@ -58,6 +58,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'editorconfig/editorconfig-vim'
 
+" Navigation
 Plug 'tpope/vim-vinegar'
 
 " Quickfix
