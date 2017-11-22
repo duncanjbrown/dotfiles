@@ -59,9 +59,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'tpope/vim-vinegar'
-" Rangerrrr
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim' " dependency of Ranger.vim
 
 " Quickfix
 Plug 'romainl/vim-qlist'
