@@ -8,9 +8,12 @@ alias bopen="bundle open"
 alias be="bundle exec"
 alias r="bundle exec rubocop && bundle exec rspec"
 alias fix='$EDITOR `git diff --name-only | uniq`'
-alias emacs='/usr/local/Cellar/emacs/25.1/bin/emacs -nw'
 alias s='tmux attach-session'
 
 newfiles() {
   git untracked | xargs -L 1 -I {} sh -c "echo \"\n* \"{} *\"\n\"; highlight --force -O ansi {} | more -r"
+}
+
+delete-merged() {
+  git branch --format="%(refname:lstrip=2)" --merged | egrep -v '^\s+(develop|master)' | xargs git branch -d #
 }
