@@ -4,7 +4,6 @@
 - ZSH/oh-my-zshell
 - Base16 Shell [repo](https://github.com/chriskempson/base16-shell)
 - For Ruby: rbenv
-- For JS: yarn
 - neovim, from homebrew
 - pyenv plus python 2.7 and 3.x for Vim plugins
 - rcm: https://github.com/thoughtbot/rcm
