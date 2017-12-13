@@ -47,7 +47,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'smerrill/vcl-vim-plugin'
 Plug 'chr4/nginx.vim'
 Plug 'tpope/vim-fireplace', { 'for': ['clojure', 'clojurescript'] }
-Plug 'kien/rainbow_parentheses.vim', { 'for': ['clojure', 'clojurescript'] }
+Plug 'luochen1990/rainbow', { 'for': ['clojure', 'clojurescript'] }
 Plug 'bhurlow/vim-parinfer', { 'for': ['clojure', 'clojurescript'] }
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-endwise' " For Ruby
@@ -147,6 +147,8 @@ let g:BufKillCreateMappings = 0
 " dont remap leader-f to ranger
 let g:ranger_map_keys = 0
 
+let g:rainbow_active = 1
+
 let g:clipboard = {
       \   'name': 'tmuxClipboard',
       \   'copy': {
@@ -172,3 +174,4 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
