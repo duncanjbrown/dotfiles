@@ -8,9 +8,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# javascript
-export PATH="$PATH:`yarn global bin`"
-
 # tmuxinator
 source "${HOME}/.bin/tmuxinator.zsh"
 
