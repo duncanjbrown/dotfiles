@@ -33,4 +33,4 @@ ZSH_THEME_RVM_PROMPT_SUFFIX="]%{$reset_color%}"
 # Combine it all into a final right-side prompt
 RPS1='$(git_custom_status)$(ruby_prompt_info) $EPS1'
 
-PROMPT='%{$fg[cyan]%}$(stopped_jobs_status)$(docker_machine_status)[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+PROMPT='%{$fg[cyan]%}$(stopped_jobs_status)$(docker_machine_status)%~% %(?.%{$fg[green]%}.%{$fg[red]%})%B %%%b '
