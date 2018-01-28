@@ -18,7 +18,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Themes
-Plug 'chriskempson/base16-vim'
+Plug 'olivertaylor/vacme'
 
 " Editing
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
@@ -67,13 +67,9 @@ Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
-let base16colorspace=256
 set nocompatible
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+colorscheme vacme
 
 filetype plugin indent on
 
