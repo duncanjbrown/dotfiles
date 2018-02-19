@@ -1,0 +1,10 @@
+set show-changes = yes
+set refresh-mode = auto
+set main-view = \
+                date:default \
+                author:full \
+                id:yes \
+                commit-title:graph=yes,refs=yes
+
+bind generic y none
+bind generic y @bash -c "echo -n `echo %(commit) | cut -c 1-7` | pbcopy"
