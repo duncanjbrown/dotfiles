@@ -8,6 +8,7 @@ endif
 
 " Press enter to unhighlight searches
 nnoremap <silent> <CR> :noh<CR>
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 " in visual mode, press // to search highlighted text
 vnoremap // y/<C-R>"<CR>
