@@ -17,3 +17,7 @@ newfiles() {
 delete-merged() {
   git branch --format="%(refname:lstrip=2)" --merged | egrep -v '^\s+(develop|master)' | xargs git branch -d #
 }
+
+shaf() {
+  git rev-parse :/$1 | tee >(pbcopy) | git show --stdin
+}
