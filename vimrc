@@ -8,6 +8,7 @@ call plug#begin()
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'jreybert/vimagit'
 Plug 'junegunn/gv.vim'
 Plug 'idanarye/vim-merginal' " branching for fugitive
