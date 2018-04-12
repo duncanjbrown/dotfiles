@@ -19,5 +19,5 @@ delete-merged() {
 }
 
 shaf() {
-  git rev-parse :/$1 | tee >(pbcopy) | git show --stdin
+  git rev-parse :/$1 | tee >(pbcopy) | git show -s --format=%H%n%B --stdin
 }
