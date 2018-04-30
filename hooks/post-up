@@ -34,18 +34,3 @@ show_done_message
 echo "Installing vim plugins"
 nvim +PlugUpdate
 show_done_message
-
-echo 'Installing Nerd Font: Source Code Pro'
-tmpdir="$HOME/.dotfiles/tmp"
-path="${tmpdir}/SourceCodePro.zip"
-if [ -f $path ]
-then
-  show_nothing_to_do_message
-else
-  mkdir $tmpdir
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.0.0/SourceCodePro.zip -O "${path}"
-  unzip $path -d $tmpdir
-  cp ${tmpdir}/Sauce* $HOME/Library/Fonts
-  cd $cwd
-  show_done_message
-fi
