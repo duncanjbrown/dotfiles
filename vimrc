@@ -95,7 +95,8 @@ set shiftround " Round indents to a multiple of shiftwidth
 set ttimeout
 set ttimeoutlen=50
 
-set laststatus=2 " always show a statusline in inactive windows
+set title
+set laststatus=0
 set ruler " line and column under cursor
 set wildmenu
 set cursorline " highlight the current line
@@ -169,7 +170,7 @@ au TermOpen * setlocal nonumber norelativenumber
 
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+  \| autocmd BufLeave <buffer> set showmode ruler
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
