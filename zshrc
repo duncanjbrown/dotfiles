@@ -22,6 +22,13 @@ source "${HOME}/.zsh/base16"
 source "${HOME}/.zsh/fzf"
 source "${HOME}/.zsh/ssh"
 
+# Display "$(pwd)" in the terminal window title
+DISABLE_AUTO_TITLE="true"
+function precmd () {
+  window_title="\033]0;${PWD}\007"
+  echo -ne "$window_title"
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GOPATH=$HOME/go

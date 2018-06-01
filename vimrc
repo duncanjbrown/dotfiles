@@ -96,6 +96,7 @@ set shiftround " Round indents to a multiple of shiftwidth
 set ttimeout
 set ttimeoutlen=50
 
+auto BufEnter * let &titlestring = expand("%:f")
 set title
 set laststatus=0
 set ruler " line and column under cursor
