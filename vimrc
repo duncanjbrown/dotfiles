@@ -56,7 +56,9 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
+Plug 'hashivim/vim-terraform'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
 
 " Navigation
 Plug 'tpope/vim-vinegar'
