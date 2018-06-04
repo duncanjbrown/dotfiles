@@ -52,6 +52,8 @@ Plug 'bhurlow/vim-parinfer', { 'for': ['clojure', 'clojurescript'] }
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-endwise' " For Ruby
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-bundler'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'jceb/vim-orgmode'
