@@ -1,0 +1,21 @@
+[include]
+  path = ~/.gitconfig.local
+[alias]
+  st = status
+  please = push --force-with-lease
+  untracked = ls-files --others --exclude-standard
+  msg = log --format=%B -n 1
+  steal = "!f() { git checkout \"$1\" -- \"$2\"; }; f"
+[core]
+  excludesfile = ~/.gitignore_global
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[commit]
+  template = ~/.stCommitMsg
+[push]
+  default = current
+[init]
+  templatedir = ~/.git_template
+[diff-so-fancy]
+  markEmptyLines = false
+[rebase]
+  autosquash = true
