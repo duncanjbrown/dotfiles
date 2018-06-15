@@ -22,3 +22,7 @@ delete-merged() {
 shaf() {
   git rev-parse :/$1 | tee >(pbcopy) | git show -s --format=%H%n%B --stdin
 }
+
+viewcsv() {
+  column -s, -t < /$1
+}
