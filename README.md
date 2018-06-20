@@ -20,6 +20,7 @@ install sandboxed pythons with neovim support.
 Download to `~/.dotfiles`.
 
 ```
+brew bundle # You may need to install Homebrew first
 rcup
 ```
 
