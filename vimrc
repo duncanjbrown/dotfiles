@@ -31,6 +31,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'sjl/gundo.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " External processes
 Plug 'kassio/neoterm'
