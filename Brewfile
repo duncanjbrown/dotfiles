@@ -4,6 +4,7 @@ brew 'ruby-build'
 brew 'node'
 
 # Text editing
+tap  'd12frosted/emacs-plus'
 brew 'd12frosted/emacs-plus/emacs-plus'
 brew 'editorconfig'
 brew 'neovim'
@@ -22,6 +23,7 @@ brew 'ssh-copy-id'
 brew 'fzf'
 
 # Dotfiles utilities
+tap 'thoughtbot/formulae'
 brew 'thoughtbot/formulae/rcm'
 
 # Networking
@@ -46,6 +48,7 @@ brew 'tig'
 
 # Usefuls
 brew 'htop'
+brew 'cmake'
 
 # Desktop software
 cask 'google-chrome'
