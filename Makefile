@@ -6,3 +6,8 @@ python:
 	-pyenv virtualenv 2.7.11 neovim2
 	-pyenv virtualenv 3.4.4 neovim3
 	-scripts/python-install-neovim-plugins.sh
+
+~/.emacs.d:
+	git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+spacemacs: ~/.emacs.d
