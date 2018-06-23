@@ -328,6 +328,7 @@ you should place your code here."
   (setq org-agenda-files '("~/Dropbox/org"))
 
   (setq org-agenda-files '("~/Dropbox/org"))
+  (setq vc-follow-symlinks t) ;; follow symlinks to version-controlled files
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
