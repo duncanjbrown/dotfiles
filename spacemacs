@@ -325,6 +325,7 @@ you should place your code here."
   (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
   (setq org-todo-keywords
         '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE")))
+  (setq org-agenda-files '("~/Dropbox/org"))
 
   (setq org-agenda-files '("~/Dropbox/org"))
   )
