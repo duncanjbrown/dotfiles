@@ -38,5 +38,3 @@ export PATH=$PATH:$GOPATH/bin
 . /usr/local/etc/profile.d/z.sh
 
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
