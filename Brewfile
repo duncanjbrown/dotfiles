@@ -49,6 +49,7 @@ brew 'tig'
 # Usefuls
 brew 'htop'
 brew 'cmake'
+brew 'pidof'
 
 # Desktop software
 cask 'google-chrome'
