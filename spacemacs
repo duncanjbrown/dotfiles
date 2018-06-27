@@ -262,7 +262,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -330,6 +330,8 @@ you should place your code here."
 
   (setq org-agenda-files '("~/Dropbox/org"))
   (setq vc-follow-symlinks t) ;; follow symlinks to version-controlled files
+  (setq powerline-image-apple-rgb t)
+  (fringe-mode 4)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
