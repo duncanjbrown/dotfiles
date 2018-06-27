@@ -322,7 +322,8 @@ you should place your code here."
               (setq fill-column 79)
               ;; Enable automatic line wrapping at fill column
               (auto-fill-mode t)))
-  (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+  (define-key winum-keymap "\M-3" nil)
+  (global-set-key (kbd "M-3")(lambda () (interactive) (insert "#")))
   (setq org-todo-keywords
         '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE")))
   (setq org-agenda-files '("~/Dropbox/org"))
