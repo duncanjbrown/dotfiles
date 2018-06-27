@@ -61,6 +61,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'hashivim/vim-terraform'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
+Plug 'afternoon/vim-phpunit'
 
 " Navigation
 Plug 'tpope/vim-vinegar'

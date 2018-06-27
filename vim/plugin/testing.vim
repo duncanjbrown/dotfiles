@@ -7,4 +7,5 @@ nmap <silent> <leader>l :TestSuite --only-failures<CR>
 let test#strategy = 'dispatch'
 
 let g:dispatch_compilers = {
-      \ 'bundle exec': ''}
+      \ 'bundle exec': '',
+      \ './vendor/bin/': ''}
