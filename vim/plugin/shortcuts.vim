@@ -1,8 +1,10 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
-" save with ,s
+" save with <leader>-s
 nnoremap <Leader>s :w<CR>
+" ...and <leader>-fs, to make switching between vim and emacs less painful
+nnoremap <Leader>fs :w<CR>
 
 " prompt with \
 map \ :
@@ -17,7 +19,7 @@ inoremap <C-c> <Esc>
 imap jj <Esc>
 
 " Fzf
-nnoremap <Leader>f :Ag<CR>
+nnoremap <Leader>ff :Ag<CR>
 nnoremap <Leader>j :Buffers<CR>
 nnoremap <C-p> :Files<CR>
 noremap  <Leader>F :Tags<CR>
