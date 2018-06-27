@@ -33,6 +33,10 @@ brew 'netcat'
 brew 'openssl'
 brew 'wget'
 
+# Databases
+brew 'postgresql'
+brew 'mysql'
+
 # Testing
 brew 'phantomjs'
 brew 'shellcheck'
