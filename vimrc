@@ -56,13 +56,8 @@ Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'hashivim/vim-terraform'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go'
 Plug 'afternoon/vim-phpunit'
-
-" Navigation
-Plug 'tpope/vim-vinegar'
 
 " Quickfix
 Plug 'romainl/vim-qlist'
