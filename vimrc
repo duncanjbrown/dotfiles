@@ -180,3 +180,4 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
+let g:ycm_autoclose_preview_window_after_insertion = 1
