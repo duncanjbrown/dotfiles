@@ -40,3 +40,5 @@ nnoremap <Leader>W :call fzf#vim#tags(expand('<cword>'))<CR>
 
 nnoremap <Tab> %
 vnoremap <Tab> %
+
+nmap <Leader>fc :let @*=expand("%:p")<CR>
