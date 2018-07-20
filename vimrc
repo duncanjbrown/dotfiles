@@ -66,14 +66,11 @@ Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 let base16colorspace=256
-set nocompatible
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-
-filetype plugin indent on
 
 " never fold git commit details
 autocmd FileType git set foldlevel=1
