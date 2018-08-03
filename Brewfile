@@ -61,6 +61,4 @@ cask 'iterm2'
 cask 'dropbox'
 cask '1password'
 cask 'hammerspoon'
-
-
-
+cask 'qlstephen' # enable quicklook for plain text files without extensions
