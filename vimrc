@@ -58,6 +58,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'afternoon/vim-phpunit'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " Quickfix
 Plug 'romainl/vim-qlist'
