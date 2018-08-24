@@ -31,6 +31,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'sjl/gundo.vim'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'junegunn/vim-easy-align'
 
 " External processes
 Plug 'kassio/neoterm'
@@ -168,6 +169,13 @@ au TermOpen * setlocal nonumber norelativenumber
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set showmode ruler
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
