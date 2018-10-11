@@ -10,11 +10,7 @@ autocmd TermOpen * set nobuflisted
 set number
 set rnu
 
-" Ctrl-F and Ctrl-B to navigate, Ctrl-K to Kill
-nnoremap <C-b>  :bp<CR>
-inoremap <C-b>  <Esc>:bp<CR>i
-nnoremap <C-f>  :bn<CR>
-inoremap <C-f>  <Esc>:bn<CR>i
+" Ctrl-K to Kill
 nnoremap <C-k>  :BD<CR>
 inoremap <C-k>  <Esc>:BD<CR>i
 
