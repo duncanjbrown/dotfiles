@@ -50,6 +50,7 @@ bopen                     # bundle open
 ```
 publicip                  # get the public IP of your machine
 viewcsv <file>            # print a CSV file in columns
+whozat <port>             # get the process listening on a given port
 ```
 
 ## Options
