@@ -22,7 +22,9 @@ imap jj <Esc>
 
 " Fzf
 nnoremap <Leader>ff :Ag<CR>
-nnoremap <Leader>j :Buffers<CR>
+nnoremap <Leader>bb :Buffers<CR>
+nnoremap <Leader>bd :BD<CR>
+nnoremap <Leader>pf :Files<CR>
 nnoremap <C-p> :Files<CR>
 noremap  <Leader>F :Tags<CR>
 
@@ -33,6 +35,8 @@ vnoremap <Leader>c :TComment<CR>
 inoremap <C-U> <C-G>u<C-U>
 
 nnoremap <Leader>U :GundoToggle<CR>
+
+nnoremap <Leader><Tab> <C-^>
 
 " Delete all the buffers except this one
 nnoremap <Leader>kk :BufOnly<CR>
