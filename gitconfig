@@ -6,6 +6,7 @@
   untracked = ls-files --others --exclude-standard
   msg = log --format=%B -n 1
   steal = "!f() { git checkout \"$1\" -- \"$2\"; }; f"
+  original = !cat .git/rebase-apply/original-commit
 [core]
   excludesfile = ~/.gitignore_global
   pager = diff-so-fancy | less --tabs=4 -RFX
