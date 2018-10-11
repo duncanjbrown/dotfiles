@@ -1,6 +1,8 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+
 " save with <leader>-s
 nnoremap <Leader>s :w<CR>
 " ...and <leader>-fs, to make switching between vim and emacs less painful

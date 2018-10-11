@@ -66,6 +66,8 @@ Plug 'mxw/vim-jsx'
 Plug 'romainl/vim-qlist'
 Plug 'tpope/vim-unimpaired'
 
+Plug 'liuchengxu/vim-which-key'
+
 call plug#end()
 
 let base16colorspace=256
