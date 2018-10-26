@@ -10,6 +10,7 @@ brew 'editorconfig'
 brew 'neovim'
 brew 'ctags'
 brew 'the_silver_searcher'
+brew 'html5-tidy'
 
 # Shell environment
 brew 'zsh'

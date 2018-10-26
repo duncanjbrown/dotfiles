@@ -12,3 +12,4 @@ let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 let g:neomake_ruby_enabled_makers = ['rubocop']
 let g:neomake_javascript_enabled_makers = ['eslint']
 
+command -range=% TidyHTMLFragment :<line1>,<line2> ! tidy --show-body-only yes -q -i --show-errors 0
