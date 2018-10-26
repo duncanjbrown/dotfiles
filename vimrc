@@ -47,9 +47,6 @@ Plug 'qpkorr/vim-bufkill'
 " Syntax and language
 Plug 'smerrill/vcl-vim-plugin'
 Plug 'chr4/nginx.vim'
-Plug 'tpope/vim-fireplace', { 'for': ['clojure', 'clojurescript'] }
-Plug 'luochen1990/rainbow', { 'for': ['clojure', 'clojurescript'] }
-Plug 'bhurlow/vim-parinfer', { 'for': ['clojure', 'clojurescript'] }
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-endwise' " For Ruby
 Plug 'tpope/vim-rails'
