@@ -185,6 +185,9 @@ nmap ga <Plug>(EasyAlign)
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 
+" % can jump between opening and closing tags
+runtime macros/matchit.vim
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
