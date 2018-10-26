@@ -181,6 +181,10 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" Always use ft=php.html in PHP files
+au BufRead *.php set ft=php.html
+au BufNewFile *.php set ft=php.html
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
