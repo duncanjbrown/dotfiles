@@ -24,7 +24,10 @@ imap jj <Esc>
 nnoremap <Leader>ff :Ag<CR>
 nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bd :BD<CR>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>on :on<CR>
 nnoremap <C-p> :Files<CR>
 noremap  <Leader>F :Tags<CR>
 
