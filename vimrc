@@ -58,6 +58,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'afternoon/vim-phpunit'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'lucapette/vim-ruby-doc'
 
 " Quickfix
 Plug 'romainl/vim-qlist'
@@ -177,6 +178,9 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Make RubyDoc work on MacOS
+let g:ruby_doc_command='open'
 
 " Always use ft=php.html in PHP files
 au BufRead *.php set ft=php.html
