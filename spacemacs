@@ -348,6 +348,11 @@ you should place your code here."
   (define-key winum-keymap "\M-3" nil)
   (global-set-key (kbd "M-3")(lambda () (interactive) (insert "#")))
 
+  (add-hook 'cider-mode-hook
+            (lambda()
+              (define-key cider-mode-map (kbd "C-c C-v") 'cider-pprint-eval-defun-at-point)
+              (define-key cider-mode-map (kbd "C-c C-r") 'cider-pprint-eval-last-sexp)))
+
   (defun my-flymd-browser-function (url)
     (let ((process-environment (browse-url-process-environment)))
       (apply 'start-process
