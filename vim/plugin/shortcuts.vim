@@ -28,7 +28,6 @@ nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>on :on<CR>
-nnoremap <C-p> :Files<CR>
 noremap  <Leader>F :Tags<CR>
 
 " comment / decomment & normal comment behavior
