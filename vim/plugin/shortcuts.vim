@@ -56,3 +56,6 @@ noremap L g$
 
 nnoremap <Leader>R :Rubofix<CR>
 vnoremap <Leader>ht :TidyHTMLFragment<CR>
+
+" Macro repetition
+vnoremap aa :normal @a<CR>
