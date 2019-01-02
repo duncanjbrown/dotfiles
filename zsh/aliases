@@ -28,7 +28,7 @@ shaf() {
 }
 
 viewcsv() {
-  column -s, -t < /$1
+  column -s, -t < $1
 }
 
 whozat() {
