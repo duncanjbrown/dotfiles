@@ -6,6 +6,8 @@ endfunction
 
 call plug#begin()
 
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -32,6 +34,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'sjl/gundo.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-sneak'
 
 " External processes
 Plug 'kassio/neoterm'
@@ -59,6 +62,8 @@ Plug 'afternoon/vim-phpunit'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'lucapette/vim-ruby-doc'
+Plug 'jwalton512/vim-blade'
+Plug 'stephpy/vim-yaml'
 
 " Quickfix
 Plug 'romainl/vim-qlist'
