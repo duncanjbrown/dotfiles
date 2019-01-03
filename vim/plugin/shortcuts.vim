@@ -34,6 +34,10 @@ noremap  <Leader>F :Tags<CR>
 nnoremap <Leader>c :TComment<CR>
 vnoremap <Leader>c :TComment<CR>
 
+" NERDTree
+nnoremap <Leader>ft :NERDTreeToggle<CR>
+
+
 inoremap <C-U> <C-G>u<C-U>
 
 nnoremap <Leader>U :GundoToggle<CR>
