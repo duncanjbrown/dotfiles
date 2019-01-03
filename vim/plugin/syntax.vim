@@ -1,6 +1,7 @@
 autocmd! BufEnter,BufWritePost *.rb,*.rake,*.md Neomake
 autocmd! BufEnter,BufWritePost *.coffee Neomake
 autocmd! BufEnter,BufWritePost *.js,*.jsx Neomake
+autocmd! BufEnter,BufWritePost *.scss Neomake
 " autocmd! BufEnter,BufWritePost *.php Neomake
 
 let g:neomake_ruby_rubocop_args = ['bundle', 'exec', 'rubocop']
