@@ -63,3 +63,5 @@ vnoremap <Leader>ht :TidyHTMLFragment<CR>
 
 " Macro repetition
 vnoremap aa :normal @a<CR>
+
+nnoremap <Leader>pl :r !lorem -l 3<CR>
