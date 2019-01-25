@@ -187,10 +187,6 @@ nmap ga <Plug>(EasyAlign)
 " Make RubyDoc work on MacOS
 let g:ruby_doc_command='open'
 
-" Always use ft=php.html in PHP files
-au BufRead *.php set ft=php.html
-au BufNewFile *.php set ft=php.html
-
 " % can jump between opening and closing tags
 runtime macros/matchit.vim
 
