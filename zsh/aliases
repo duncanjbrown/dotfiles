@@ -34,3 +34,7 @@ viewcsv() {
 whozat() {
   lsof -i :$1 | awk 'NR>1 {print $2}' | xargs ps
 }
+
+evict-listeners () {
+  whozat $1 | grep ^\[0-9\] | awk '{print $1}' | xargs kill -9
+}
