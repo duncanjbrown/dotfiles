@@ -1,9 +1,3 @@
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
-
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -23,7 +17,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'chriskempson/base16-vim'
 
 " Editing
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'sickill/vim-pasta'
@@ -203,5 +196,3 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-
-let g:ycm_autoclose_preview_window_after_insertion = 1
