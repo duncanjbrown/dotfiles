@@ -14,8 +14,6 @@ map \ :
 noremap  <Leader>g :Gstatus<CR>
 noremap  <Leader>G :GV<CR>
 
-nnoremap <Leader>n :RangerCurrentFile<CR>
-
 " exit insert mode
 inoremap <C-c> <Esc>
 imap jj <Esc>
