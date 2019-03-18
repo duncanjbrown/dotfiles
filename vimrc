@@ -5,8 +5,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'jreybert/vimagit'
-Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 
 " FZF
@@ -20,15 +18,12 @@ Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
-Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
-Plug 'sjl/gundo.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'justinmk/vim-sneak'
 
 " External processes
 Plug 'kassio/neoterm'
@@ -44,7 +39,6 @@ Plug 'qpkorr/vim-bufkill'
 " Syntax and language
 Plug 'smerrill/vcl-vim-plugin'
 Plug 'chr4/nginx.vim'
-Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
@@ -61,8 +55,6 @@ Plug 'stephpy/vim-yaml'
 " Quickfix
 Plug 'romainl/vim-qlist'
 Plug 'tpope/vim-unimpaired'
-
-Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
