@@ -1,8 +1,6 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-
 " save with <leader>-s
 nnoremap <Leader>s :w<CR>
 " ...and <leader>-fs, to make switching between vim and emacs less painful
@@ -35,11 +33,9 @@ vnoremap <Leader>c :TComment<CR>
 " NERDTree
 nnoremap <Leader>ft :NERDTreeToggle<CR>
 
-
 inoremap <C-U> <C-G>u<C-U>
 
-nnoremap <Leader>U :GundoToggle<CR>
-
+" Flip between files with Space-Tab
 nnoremap <Leader><Tab> <C-^>
 
 " Delete all the buffers except this one
