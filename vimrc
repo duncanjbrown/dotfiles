@@ -48,7 +48,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'afternoon/vim-phpunit'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'lucapette/vim-ruby-doc'
 Plug 'jwalton512/vim-blade'
 Plug 'stephpy/vim-yaml'
 
@@ -134,8 +133,6 @@ highlight Comment cterm=italic
 " don't set mappings on <Leader>b etc
 " https://github.com/qpkorr/vim-bufkill/issues/14
 let g:BufKillCreateMappings = 0
-" dont remap leader-f to ranger
-let g:ranger_map_keys = 0
 
 let g:rainbow_active = 1
 
@@ -161,16 +158,6 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set showmode ruler
 
 let g:fzf_layout = { 'window': '20split enew' }
-
-" vim-easy-align
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
-" Make RubyDoc work on MacOS
-let g:ruby_doc_command='open'
 
 " % can jump between opening and closing tags
 runtime macros/matchit.vim
