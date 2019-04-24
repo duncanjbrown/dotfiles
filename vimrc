@@ -178,7 +178,6 @@ autocmd FileChangedShellPost *
 
 set shortmess+=c
 set updatetime=300
-set cmdheight=2
 
 " Use Tab for coc.nvim completions
 inoremap <silent><expr> <TAB>
