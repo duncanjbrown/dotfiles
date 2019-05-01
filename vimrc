@@ -159,6 +159,11 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 let g:fzf_layout = { 'window': '20split enew' }
 
+" FZF for files changed since the last commit
+command! FZFChangedFiles call fzf#run(fzf#wrap(
+  \ {'source': 'git ls-files --exclude-standard --others --modified'}
+  \ ))
+
 " % can jump between opening and closing tags
 runtime macros/matchit.vim
 

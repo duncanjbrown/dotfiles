@@ -25,6 +25,7 @@ nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>on :on<CR>
 noremap  <Leader>F :Tags<CR>
+nnoremap <Leader>pc :FZFChangedFiles<CR>
 
 " comment / decomment & normal comment behavior
 nnoremap <Leader>c :TComment<CR>

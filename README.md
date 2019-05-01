@@ -24,6 +24,20 @@ brew bundle # You may need to install Homebrew first
 rcup
 ```
 
+## Vim leader bindings
+
+### FZF
+
+``` 
+ff     Search inside all files 
+F      Search all ctags 
+w      Search inside all files using the word under the cursor 
+W      Search all ctags using the word under the cursor 
+pf     Search all filenames 
+pc     Search filenames changed since last commit 
+bb     Search open buffers 
+```
+
 ## Aliases
 
 ### git
