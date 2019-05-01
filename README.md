@@ -29,11 +29,12 @@ rcup
 ### FZF
 
 ``` 
-ff     Search inside all files 
-F      Search all ctags 
-w      Search inside all files using the word under the cursor 
-W      Search all ctags using the word under the cursor 
-pf     Search all filenames 
+ff     Search inside all files
+F      Search all ctags
+w      Search inside all files using the word under the cursor
+W      Search all ctags using the word under the cursor
+pf     Search all filenames controlled by git
+pa     Search all filenames in the folder
 pc     Search filenames changed since last commit 
 bb     Search open buffers 
 ```

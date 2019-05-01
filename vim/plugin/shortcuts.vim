@@ -22,7 +22,8 @@ nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bd :BD<CR>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
-nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>pf :GFiles<CR>
+nnoremap <Leader>pa :Files<CR>
 nnoremap <Leader>on :on<CR>
 noremap  <Leader>F :Tags<CR>
 nnoremap <Leader>pc :FZFChangedFiles<CR>
