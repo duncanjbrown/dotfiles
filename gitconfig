@@ -18,3 +18,5 @@
   markEmptyLines = false
 [rebase]
   autosquash = true
+[commit]
+	verbose = true
