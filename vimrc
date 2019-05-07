@@ -55,6 +55,9 @@ Plug 'stephpy/vim-yaml'
 Plug 'romainl/vim-qlist'
 Plug 'tpope/vim-unimpaired'
 
+" Notes
+Plug 'https://github.com/Alok/notational-fzf-vim'
+
 call plug#end()
 
 let base16colorspace=256
@@ -213,3 +216,7 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+let g:git_messenger_always_into_popup = v:true
+
+let g:nv_search_paths = ['~/Dropbox/nvnotes']

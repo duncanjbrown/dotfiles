@@ -61,3 +61,5 @@ vnoremap <Leader>ht :TidyHTMLFragment<CR>
 vnoremap aa :normal @a<CR>
 
 nnoremap <Leader>pl :r !lorem -l 3<CR>
+
+nnoremap <Leader>nv :NV<CR>
