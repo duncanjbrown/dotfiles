@@ -7,6 +7,10 @@
   msg = log --format=%B -n 1
   steal = "!f() { git checkout \"$1\" -- \"$2\"; }; f"
   original = !cat .git/rebase-apply/original-commit
+  recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 100
+  fixit = "!f() { git commit --fixup=$1; GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $1~1; }; f"
+  jump = !BRANCH=`git recent | fzf` && git checkout ${BRANCH}
+  rewrite = !HASH=`git log --pretty=oneline | head -n 100 | fzf` && git fixit `echo ${HASH} | awk '{ print $1 }'`
 [core]
   excludesfile = ~/.gitignore_global
   pager = diff-so-fancy | less --tabs=4 -RFX
