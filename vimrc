@@ -25,6 +25,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'gregsexton/MatchTag'
 
 " External processes
 Plug 'kassio/neoterm'
