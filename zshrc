@@ -37,4 +37,4 @@ export PATH=$PATH:$GOPATH/bin
 # Z
 . /usr/local/etc/profile.d/z.sh
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="${HOME}/.dotfiles/bin:/usr/local/sbin:$PATH"

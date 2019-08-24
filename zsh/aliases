@@ -10,6 +10,7 @@ alias r="bundle exec rubocop && bundle exec rspec"
 alias fix='$EDITOR `git diff --name-only | uniq`'
 alias s='tmux attach-session'
 alias publicip="curl 'https://api.ipify.org'"
+alias vi="et"
 
 fixup() {
   git commit --fixup $1
