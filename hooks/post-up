@@ -26,9 +26,10 @@ else
   show_done_message
 fi
 
-echo "Enabling italics in tmux"
-tic ~/terminal/xterm-256color.terminfo
-tic ~/terminal/tmux-256color-italic.terminfo
+echo "Enabling italics in tmux & colours in terminal emacs"
+tic -x -o ~/.terminfo ~/.dotfiles/terminal/tmux-256color.terminfo
+tic -x -o ~/.terminfo ~/.dotfiles/terminal/xterm-256color-italic.terminfo
+tic -x -o ~/.terminfo ~/.dotfiles/terminal/xterm-24bit.terminfo
 show_done_message
 
 echo "Installing vim plugins"
