@@ -47,11 +47,10 @@ bb     Search open buffers
 git please                # git push --force-with-lease
 git untracked             # show all untracked files in the current working tree
 git steal <branch> <file> # pick a file off another branch
+git jump                  # display recent branches in FZF 
+git rewrite               # pick a commit with FZF and commit --fixup onto it
 fix                       # open all merge-conflicted files in $EDITOR
-delete-merged             # delete all branches not merged into develop or master
 shaf <search string>      # print first matching commit message, copy SHA to clipboard 
-jump                      # display recent branches in FZF 
-rewrite                   # pick a commit with FZF and commit --fixup onto it
 ```
 
 ### ruby
