@@ -36,7 +36,7 @@ Plug 'tpope/vim-eunuch'
 
 " Buffers
 Plug 'schickling/vim-bufonly'
-Plug 'qpkorr/vim-bufkill'
+Plug 'mhinz/vim-sayonara'
 
 " Syntax and language
 Plug 'smerrill/vcl-vim-plugin'
@@ -245,3 +245,5 @@ endfunction
 let g:git_messenger_always_into_popup = v:true
 
 let g:nv_search_paths = ['~/Dropbox/nvnotes']
+
+let g:sayonara_confirm_quit = 1

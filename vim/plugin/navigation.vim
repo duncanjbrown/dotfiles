@@ -11,8 +11,8 @@ set number
 set rnu
 
 " Ctrl-K to Kill
-nnoremap <C-k>  :BD<CR>
-inoremap <C-k>  <Esc>:BD<CR>i
+nnoremap <C-k>  :Sayonara<CR>
+inoremap <C-k>  <Esc>:Sayonara<CR>i
 
 " do not lose history when leaving a buffer
 set hidden

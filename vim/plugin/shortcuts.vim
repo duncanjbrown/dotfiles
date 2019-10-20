@@ -19,7 +19,7 @@ imap jj <Esc>
 " Fzf
 nnoremap <Leader>ff :Ag<CR>
 nnoremap <Leader>bb :Buffers<CR>
-nnoremap <Leader>bd :BD<CR>
+nnoremap <Leader>bd :Sayonara<CR>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>pf :GFiles<CR>
