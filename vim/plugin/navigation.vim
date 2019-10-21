@@ -21,4 +21,3 @@ set hidden
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 " No fileicons at top of screen
 let g:webdevicons_enable_airline_tabline = 0
-

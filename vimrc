@@ -170,16 +170,11 @@ set termguicolors
 if has('nvim') && exists('&winblend') && &termguicolors
   set winblend=10
 
-  hi NormalFloat guibg=None
-  if exists('g:fzf_colors.bg')
-    call remove(g:fzf_colors, 'bg')
-  endif
-
   function! FloatingFZF()
-    let width = float2nr(&columns * 0.8)
+    let width = &columns
     let height = float2nr(&lines * 0.6)
     let opts = { 'relative': 'editor',
-               \ 'row': (&lines - height) / 2,
+               \ 'row': (&lines - height),
                \ 'col': (&columns - width) / 2,
                \ 'width': width,
                \ 'height': height }
