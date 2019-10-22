@@ -53,6 +53,7 @@ Plug 'mxw/vim-jsx'
 Plug 'jwalton512/vim-blade'
 Plug 'stephpy/vim-yaml'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'Olical/conjure', { 'tag': 'v2.0.0', 'do': 'bin/compile'  }
 
 " Quickfix
 Plug 'romainl/vim-qlist'
@@ -252,6 +253,8 @@ function! s:show_documentation()
   endif
 endfunction
 
+let g:coc_global_extensions = ['coc-conjure']
+
 let g:git_messenger_always_into_popup = v:true
 
 let g:nv_search_paths = ['~/Dropbox/nvnotes']
@@ -259,3 +262,7 @@ let g:nv_search_paths = ['~/Dropbox/nvnotes']
 let g:sayonara_confirm_quit = 1
 
 lua require'colorizer'.setup()
+
+" Conjure
+let g:conjure_log_direction = "horizontal"
+let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
