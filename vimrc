@@ -133,6 +133,9 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 
 highlight Comment cterm=italic gui=italic
 
+" unobtrusive vertical splits
+highlight VertSplit guibg=NONE
+
 " don't set mappings on <Leader>b etc
 " https://github.com/qpkorr/vim-bufkill/issues/14
 let g:BufKillCreateMappings = 0
