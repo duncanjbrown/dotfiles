@@ -4,9 +4,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
-Plug 'rhysd/git-messenger.vim'
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -39,28 +37,20 @@ Plug 'schickling/vim-bufonly'
 Plug 'mhinz/vim-sayonara'
 
 " Syntax and language
-Plug 'smerrill/vcl-vim-plugin'
-Plug 'chr4/nginx.vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'afternoon/vim-phpunit'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'jwalton512/vim-blade'
 Plug 'stephpy/vim-yaml'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'Olical/conjure', { 'tag': 'v2.0.0', 'do': 'bin/compile'  }
 
 " Quickfix
-Plug 'romainl/vim-qlist'
 Plug 'tpope/vim-unimpaired'
-
-" Notes
-Plug 'https://github.com/Alok/notational-fzf-vim'
 
 call plug#end()
 
@@ -256,8 +246,6 @@ endfunction
 let g:coc_global_extensions = ['coc-conjure']
 
 let g:git_messenger_always_into_popup = v:true
-
-let g:nv_search_paths = ['~/Dropbox/nvnotes']
 
 let g:sayonara_confirm_quit = 1
 
