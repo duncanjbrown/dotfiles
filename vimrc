@@ -185,7 +185,7 @@ autocmd  FileType fzf set noshowmode noruler nonu
 set termguicolors
 
 if has('nvim') && exists('&winblend') && &termguicolors
-  set winblend=10
+  set winblend=5
 
   function! FloatingFZF()
     let width = &columns
