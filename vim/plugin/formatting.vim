@@ -2,6 +2,5 @@
 " Like C-q in emacs
 map Q gq
 
-let g:EditorConfig_core_mode = 'python_external'
 au FileType * set fo-=o
 
