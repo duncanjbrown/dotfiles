@@ -51,6 +51,7 @@ git jump                  # display recent branches in FZF
 git rewrite               # pick a commit with FZF and commit --fixup onto it
 fix                       # open all merge-conflicted files in $EDITOR
 shaf <search string>      # print first matching commit message, copy SHA to clipboard 
+gset                      # hard-reset current branch to its state on origin
 ```
 
 ### ruby
