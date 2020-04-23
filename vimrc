@@ -24,6 +24,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'gregsexton/MatchTag'
+Plug 'roman/golden-ratio'
 
 " External processes
 Plug 'kassio/neoterm'
