@@ -176,24 +176,6 @@ autocmd  FileType fzf set noshowmode noruler nonu
 
 set termguicolors
 
-if has('nvim') && exists('&winblend') && &termguicolors
-  set winblend=5
-
-  function! FloatingFZF()
-    let width = &columns
-    let height = float2nr(&lines * 0.6)
-    let opts = { 'relative': 'editor',
-               \ 'row': (&lines - height),
-               \ 'col': (&columns - width) / 2,
-               \ 'width': width,
-               \ 'height': height }
-
-    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
-  endfunction
-
-  let g:fzf_layout = { 'window': 'call FloatingFZF()' }
-endif
-
 " % can jump between opening and closing tags
 runtime macros/matchit.vim
 
