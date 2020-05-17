@@ -48,7 +48,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'stephpy/vim-yaml'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'Olical/conjure', { 'tag': 'v2.0.0', 'do': 'bin/compile'  }
+Plug 'Olical/conjure', { 'tag': 'v3.0.0' }
+Plug 'bhurlow/vim-parinfer'
+Plug 'guns/vim-clojure-static'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
@@ -237,3 +239,7 @@ lua require'colorizer'.setup()
 " Conjure
 let g:conjure_log_direction = "horizontal"
 let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
+
+" make vim-clojure-static agree with cljfmt
+let g:clojure_align_subforms = 1
+
