@@ -79,7 +79,7 @@ set ttimeoutlen=50
 
 auto BufEnter * let &titlestring = expand("%:f")
 set title
-set laststatus=0
+set laststatus=2
 set ruler " line and column under cursor
 set wildmenu
 set cursorline " highlight the current line
@@ -242,3 +242,4 @@ let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"
 " make vim-clojure-static agree with cljfmt
 let g:clojure_align_subforms = 1
 
+set grepprg=ag

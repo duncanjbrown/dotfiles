@@ -24,6 +24,7 @@ local GRID = {w = 24, h = 24}
 hs.grid.setGrid(GRID.w .. 'x' .. GRID.h)
 hs.grid.MARGINX = 0
 hs.grid.MARGINY = 0
+hs.window.animationDuration = 0
 
 local pressed = {
   up = false,

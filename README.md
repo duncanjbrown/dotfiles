@@ -60,6 +60,7 @@ gset                      # hard-reset current branch to its state on origin
 be                        # bundle exec
 r                         # bundle exec rubocop && bundle exec rspec
 bopen                     # bundle open
+rff                       # re-run failing specs, bailing on first failure
 ```
 
 ### misc
