@@ -14,7 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'chriskempson/base16-vim'
 
 " Editing
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'tpope/vim-surround'
