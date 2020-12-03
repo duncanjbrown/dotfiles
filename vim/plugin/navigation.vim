@@ -9,6 +9,8 @@ autocmd TermOpen * set nobuflisted
 
 set number
 set rnu
+nnoremap 0 ^
+nnoremap ^ 0
 
 " Ctrl-K to Kill
 nnoremap <C-k>  :Sayonara!<CR>
