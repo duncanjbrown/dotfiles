@@ -26,3 +26,6 @@
 	verbose = true
 [rerere]
 	enabled = true
+[checkout]
+  defaultRemote = origin
+
