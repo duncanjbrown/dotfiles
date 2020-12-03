@@ -1,11 +1,10 @@
 # Languages
 brew 'rbenv'
 brew 'ruby-build'
-brew 'node'
+brew 'nvm'
+brew 'asdf'
 
 # Text editing
-tap  'd12frosted/emacs-plus'
-brew 'd12frosted/emacs-plus/emacs-plus'
 brew 'editorconfig'
 brew 'neovim'
 brew 'ctags'
@@ -16,7 +15,6 @@ brew 'html5-tidy'
 brew 'zsh'
 brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
 brew 'tmux'
-brew 'z'
 brew 'tree'
 brew 'highlight'
 brew 'ranger'
@@ -39,7 +37,6 @@ brew 'postgresql'
 brew 'mysql'
 
 # Testing
-brew 'phantomjs'
 brew 'shellcheck'
 
 # Ops
@@ -62,4 +59,3 @@ cask 'iterm2'
 cask 'dropbox'
 cask '1password'
 cask 'hammerspoon'
-cask 'qlstephen' # enable quicklook for plain text files without extensions
