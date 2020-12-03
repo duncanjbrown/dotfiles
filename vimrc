@@ -50,6 +50,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'Olical/conjure', { 'tag': 'v3.0.0' }
 Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
+Plug 'lepture/vim-jinja'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
