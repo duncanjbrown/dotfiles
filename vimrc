@@ -234,6 +234,9 @@ let g:git_messenger_always_into_popup = v:true
 
 let g:sayonara_confirm_quit = 1
 
+let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_preview_window = ['right:30%', 'ctrl-/']
+
 lua require'colorizer'.setup()
 
 " Conjure
