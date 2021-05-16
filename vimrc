@@ -1,5 +1,7 @@
 call plug#begin()
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -45,7 +47,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'stephpy/vim-yaml'
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'Olical/conjure', { 'tag': 'v3.0.0' }
 Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
@@ -177,6 +178,11 @@ autocmd  FileType fzf set noshowmode noruler nonu
 
 set termguicolors
 
+lua <<EOF
+local ts = require 'nvim-treesitter.configs'
+ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
+EOF
+
 " % can jump between opening and closing tags
 runtime macros/matchit.vim
 
@@ -235,8 +241,6 @@ let g:sayonara_confirm_quit = 1
 
 let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_preview_window = ['right:30%', 'ctrl-/']
-
-lua require'colorizer'.setup()
 
 " Conjure
 let g:conjure_log_direction = "horizontal"
