@@ -29,3 +29,7 @@
 [checkout]
   defaultRemote = origin
 
+[pull]
+	rebase = true
+[advice]
+	addEmptyPathspec = false
