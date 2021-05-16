@@ -10,10 +10,6 @@ ZSH_THEME="gallois-docker"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # tmuxinator
 source "${HOME}/.bin/tmuxinator.zsh"
 
@@ -27,6 +23,7 @@ source "${HOME}/.zsh/python"
 source "${HOME}/.zsh/base16"
 source "${HOME}/.zsh/fzf"
 source "${HOME}/.zsh/ssh"
+source "${HOME}/.zsh/asdf"
 
 # Display "$(pwd)" in the terminal window title
 DISABLE_AUTO_TITLE="true"
