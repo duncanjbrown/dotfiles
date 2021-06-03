@@ -13,6 +13,7 @@ alias s='tmux attach-session'
 alias publicip="curl 'https://api.ipify.org'"
 alias gset="gf && groh"
 alias ag='ag --path-to-ignore ~/.agignore --hidden'
+alias rubogit='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a'
 
 fixup() {
   git commit --fixup $1

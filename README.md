@@ -54,6 +54,7 @@ be                        # bundle exec
 r                         # bundle exec rubocop && bundle exec rspec
 bopen                     # bundle open
 rff                       # re-run failing specs, bailing on first failure
+rubogit                   # run Rubocop on changed files
 ```
 
 ### misc
