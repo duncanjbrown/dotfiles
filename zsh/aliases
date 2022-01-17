@@ -24,7 +24,7 @@ newfiles() {
 }
 
 delete-merged() {
-  git branch --format="%(refname:lstrip=2)" --merged | egrep -v '^\s+(develop|master)' | xargs git branch -d #
+  git branch --format="%(refname:lstrip=2)" --merged | egrep -v '^\s+(develop|master|main)' | xargs git branch -d #
 }
 
 shaf() {
