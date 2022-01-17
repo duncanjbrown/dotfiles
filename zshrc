@@ -36,7 +36,4 @@ function precmd () {
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# Z
-. /usr/local/etc/profile.d/z.sh
-
 export PATH="${HOME}/.dotfiles/bin:/usr/local/sbin:$PATH"
