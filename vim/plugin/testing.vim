@@ -5,8 +5,9 @@ nmap <silent> <leader>e :TestLast<CR>
 nmap <silent> <leader>l :TestSuite --only-failures<CR>
 nmap <silent> <leader>ll :silent !tmux split-window -vbd -p 33 "bundle exec rspec --only-failures; read -k1 -s;"<CR>
 
+let test#ruby#rspec#executable = 'RUBYOPT="-W0" bundle exec rspec'
 let test#strategy = 'dispatch'
 
 let g:dispatch_compilers = {
-      \ 'bundle exec': '',
+      \ 'RUBYOPT="-W0" bundle exec': '',
       \ './vendor/bin/': ''}
