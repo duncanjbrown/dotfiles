@@ -1,7 +1,5 @@
 # Languages
-brew 'rbenv'
 brew 'ruby-build'
-brew 'nvm'
 brew 'asdf'
 
 # Text editing
@@ -17,7 +15,6 @@ brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
 brew 'tmux'
 brew 'tree'
 brew 'highlight'
-brew 'ranger'
 brew 'ssh-copy-id'
 brew 'fzf'
 
@@ -34,17 +31,16 @@ brew 'wget'
 
 # Databases
 brew 'postgresql'
-brew 'mysql'
 
 # Testing
 brew 'shellcheck'
 
 # Ops
 brew 'awscli'
+brew 'cf'
 
 # Version control
 brew 'git'
-brew 'hub'
 brew 'diff-so-fancy'
 brew 'tig'
 
@@ -55,7 +51,11 @@ brew 'pidof'
 
 # Desktop software
 cask 'google-chrome'
-cask 'iterm2'
 cask 'dropbox'
 cask '1password'
 cask 'hammerspoon'
+cask 'alacritty'
+cask 'spotify'
+cask 'postman'
+cask 'zoom'
+cask 'microsoft-teams'
