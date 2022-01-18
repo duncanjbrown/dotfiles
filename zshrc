@@ -37,3 +37,4 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export PATH="${HOME}/.dotfiles/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
