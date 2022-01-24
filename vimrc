@@ -274,3 +274,9 @@ let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"
 let g:clojure_align_subforms = 1
 
 set grepprg=ag
+
+hi Normal ctermbg=none
+hi Normal guibg=none
+
+set nofoldenable
+
