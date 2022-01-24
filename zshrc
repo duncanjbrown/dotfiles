@@ -7,7 +7,7 @@ fi
 # Oh My Zsh
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="gallois-docker"
-plugins=(git)
+plugins=(git asdf)
 source $ZSH/oh-my-zsh.sh
 
 # tmuxinator
@@ -38,3 +38,6 @@ export PATH=$PATH:$GOPATH/bin
 
 export PATH="${HOME}/.dotfiles/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+export PATH="/usr/local/opt/libpq/bin:$PATH"
