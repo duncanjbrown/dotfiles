@@ -1,4 +1,6 @@
-ruby 2.7.2
+ruby 2.7.5
 nodejs 14.17.0
 perl 5.32.1
 python 3.9.5 2.7.18
+java openjdk-17
+

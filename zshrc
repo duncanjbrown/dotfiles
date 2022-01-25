@@ -37,7 +37,5 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export PATH="${HOME}/.dotfiles/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
-export PATH="/usr/local/opt/libpq/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/homebrew/opt/libpq/bin:$PATH"
