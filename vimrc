@@ -15,7 +15,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'chriskempson/base16-vim'
 
 " Editing
-Plug 'nvim-lua/completion-nvim'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'kana/vim-textobj-user'
@@ -49,7 +50,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'stephpy/vim-yaml'
-Plug 'Olical/conjure', { 'tag': 'v3.0.0' }
+Plug 'Olical/conjure'
+Plug 'venantius/vim-cljfmt'
 Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
 Plug 'lepture/vim-jinja'
@@ -136,8 +138,6 @@ highlight VertSplit guibg=NONE
 " https://github.com/qpkorr/vim-bufkill/issues/14
 let g:BufKillCreateMappings = 0
 
-let g:rainbow_active = 1
-
 let g:clipboard = {
       \   'name': 'tmuxClipboard',
       \   'copy': {
@@ -208,48 +208,11 @@ autocmd FileChangedShellPost *
 set shortmess+=c
 set updatetime=300
 
-autocmd BufEnter * lua require'completion'.on_attach()
-
-" Use <Tab> and <S-Tab> to navigate through popup menu
-" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-let g:completion_enable_auto_popup = 1
-
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
-" Avoid showing message extra message when using completion
-set shortmess+=c
-
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
-
 lua << EOF
   local nvim_lsp = require('lspconfig')
-
-  local on_attach = function(client, bufnr)
-    require('completion').on_attach()
-
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-    -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
-      vim.api.nvim_exec([[
-      hi LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
-      hi LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
-      hi LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-      ]], false)
-  end
-  end
 
   local servers = {'solargraph'}
   for _, lsp in ipairs(servers) do
@@ -257,6 +220,10 @@ lua << EOF
       on_attach = on_attach,
     }
   end
+
+  vim.g.coq_settings = {
+    auto_start = 'shut-up',
+  }
 EOF
 
 let g:git_messenger_always_into_popup = v:true
@@ -267,8 +234,7 @@ let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_preview_window = ['right:30%', 'ctrl-/']
 
 " Conjure
-let g:conjure_log_direction = "horizontal"
-let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
+let g:conjure#log#wrap = 'true'
 
 " make vim-clojure-static agree with cljfmt
 let g:clojure_align_subforms = 1
