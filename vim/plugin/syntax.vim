@@ -7,9 +7,6 @@ let g:neomake_ruby_rubocop_args = ['bundle', 'exec', 'rubocop']
 let g:neomake_ruby_rubocop_exe = '/usr/bin/env'
 command Rubofix ! bundle exec rubocop -a %
 
-let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
-let b:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-
 " let g:neomake_open_list = 2
 let g:neomake_ruby_enabled_makers = ['rubocop']
 let g:neomake_javascript_enabled_makers = ['eslint']
