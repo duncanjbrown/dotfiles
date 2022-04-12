@@ -48,6 +48,7 @@ brew 'tig'
 brew 'htop'
 brew 'cmake'
 brew 'pidof'
+brew 'graphviz'
 
 # Desktop software
 cask 'google-chrome'
