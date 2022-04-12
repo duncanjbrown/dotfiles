@@ -22,7 +22,6 @@ source "${HOME}/.zsh/functions"
 source "${HOME}/.zsh/base16"
 source "${HOME}/.zsh/fzf"
 source "${HOME}/.zsh/ssh"
-source "${HOME}/.zsh/asdf"
 
 # Display "$(pwd)" in the terminal window title
 DISABLE_AUTO_TITLE="true"
@@ -39,3 +38,9 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="${HOME}/.dotfiles/bin:/usr/local/sbin:$PATH"
 # export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/homebrew/opt/libpq/bin:$PATH"
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias cf='/usr/local/bin/cf'
+export XDG_CONFIG_HOME="${HOME}/.config"
+
+source "${HOME}/.zsh/asdf"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
