@@ -58,6 +58,7 @@ Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
 Plug 'lepture/vim-jinja'
 Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'rust-lang/rust.vim'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
@@ -185,7 +186,11 @@ set termguicolors
 
 lua <<EOF
 local ts = require 'nvim-treesitter.configs'
+<<<<<<< HEAD
 ts.setup {ensure_installed = "all", highlight = {enable = true}}
+=======
+ts.setup {ensure_installed = 'all', highlight = {enable = true}}
+>>>>>>> f7b40e7 (Sundry)
 EOF
 
 set foldmethod=expr
@@ -217,12 +222,14 @@ set completeopt=menuone,noinsert,noselect
 lua << EOF
   local nvim_lsp = require('lspconfig')
 
-  local servers = {'solargraph'}
-  for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
+  nvim_lsp.solargraph.setup{
+  settings = {
+    solargraph = {
+      useBundler = true,
+      completion = true
+      }
     }
-  end
+  }
 
   vim.g.coq_settings = {
     auto_start = 'shut-up',
@@ -243,6 +250,8 @@ let g:conjure#log#wrap = 'true'
 let g:clojure_align_subforms = 1
 
 set grepprg=ag
+
+let g:conjure#debug = 'true'
 
 hi Normal ctermbg=none
 hi Normal guibg=none
