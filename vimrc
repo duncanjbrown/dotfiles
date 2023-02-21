@@ -1,5 +1,7 @@
 call plug#begin()
 
+let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Git
@@ -55,6 +57,7 @@ Plug 'venantius/vim-cljfmt'
 Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
 Plug 'lepture/vim-jinja'
+Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
@@ -182,7 +185,7 @@ set termguicolors
 
 lua <<EOF
 local ts = require 'nvim-treesitter.configs'
-ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
+ts.setup {ensure_installed = "all", highlight = {enable = true}}
 EOF
 
 set foldmethod=expr

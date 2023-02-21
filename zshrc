@@ -16,6 +16,8 @@ source "${HOME}/.bin/tmuxinator.zsh"
 # local configuration
 test -e "${HOME}/.environment" && source "${HOME}/.environment"
 
+eval "$(/usr/local/bin/brew shellenv)"
+
 export EDITOR=nvim
 source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
