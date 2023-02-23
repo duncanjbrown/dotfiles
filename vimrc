@@ -3,6 +3,11 @@ call plug#begin()
 let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'williamboman/mason.nvim'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'mfussenegger/nvim-dap'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -17,9 +22,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'chriskempson/base16-vim'
 
 " Editing
+Plug 'neovim/nvim-lspconfig'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'neovim/nvim-lspconfig'
 
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
@@ -33,7 +38,7 @@ Plug 'gregsexton/MatchTag'
 
 " External processes
 Plug 'kassio/neoterm'
-Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-eunuch'
@@ -59,6 +64,7 @@ Plug 'guns/vim-clojure-static'
 Plug 'lepture/vim-jinja'
 Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'rust-lang/rust.vim'
+Plug 'slim-template/vim-slim'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
@@ -186,11 +192,7 @@ set termguicolors
 
 lua <<EOF
 local ts = require 'nvim-treesitter.configs'
-<<<<<<< HEAD
 ts.setup {ensure_installed = "all", highlight = {enable = true}}
-=======
-ts.setup {ensure_installed = 'all', highlight = {enable = true}}
->>>>>>> f7b40e7 (Sundry)
 EOF
 
 set foldmethod=expr
@@ -219,17 +221,32 @@ set updatetime=300
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
+
 lua << EOF
+  require("mason").setup()
+
   local nvim_lsp = require('lspconfig')
 
   nvim_lsp.solargraph.setup{
-  settings = {
-    solargraph = {
-      useBundler = true,
-      completion = true
+    cmd = { "bundle", "exec", "solargraph", "stdio" },
+    settings = {
+      solargraph = {
+          completion = true,
+        }
+      }
+  }
+
+  nvim_lsp.clojure_lsp.setup {}
+
+  nvim_lsp.rust_analyzer.setup {
+    settings = {
+      ["rust-analyzer"] = {
+        checkOnSave = {
+          command = "clippy"
+          },
+        }
       }
     }
-  }
 
   vim.g.coq_settings = {
     auto_start = 'shut-up',
@@ -245,13 +262,12 @@ let g:fzf_preview_window = ['right:30%', 'ctrl-/']
 
 " Conjure
 let g:conjure#log#wrap = 'true'
+let g:conjure#extract#tree_sitter#enabled = 'true'
 
 " make vim-clojure-static agree with cljfmt
 let g:clojure_align_subforms = 1
 
 set grepprg=ag
-
-let g:conjure#debug = 'true'
 
 hi Normal ctermbg=none
 hi Normal guibg=none

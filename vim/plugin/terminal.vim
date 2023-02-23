@@ -9,7 +9,7 @@ command! -nargs=+ TT Topen | T <args>
 
 nnoremap § :TT 
 vnoremap <Leader>2 :TREPLSendSelection<CR>
-nnoremap <Leader>2 :TREPLSendLine<CR>
+" nnoremap <Leader>2 :TREPLSendLine<CR>
 nnoremap <Leader>3 :TREPLSendFile<CR>
 nnoremap <Leader>4 :Tmap 
 nnoremap <Leader>0 :Ttoggle<CR> 

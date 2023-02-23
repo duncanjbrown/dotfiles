@@ -1,6 +1,8 @@
 ruby 3.1.2
-nodejs 14.17.0
+nodejs 18.7.0
+perl 5.32.1
 python 3.9.5 2.7.18
-java openjdk-17
-clojure 1.10.3.1069
+java openjdk-18
+clojure 1.11.1.1155
 make 4.2.1
+yarn 1.22.19
