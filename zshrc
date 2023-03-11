@@ -47,16 +47,12 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 
 source "${HOME}/.zsh/asdf"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-<<<<<<< HEAD
 export PATH="/usr/local/opt/curl/bin:$PATH"
-=======
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # bun completions
 [ -s "/Users/duncan/.bun/_bun" ] && source "/Users/duncan/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
->>>>>>> 8ca3c95 (update)
+# python bins
+export PATH="${HOME}/.local/bin:$PATH"
