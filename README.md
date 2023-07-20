@@ -38,6 +38,7 @@ bb     Search open buffers
 
 ```
 git please                # git push --force-with-lease
+git smush                 # git commit --amend --no-edit && git please
 git untracked             # show all untracked files in the current working tree
 git steal <branch> <file> # pick a file off another branch
 git jump                  # display recent branches in FZF 

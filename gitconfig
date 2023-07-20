@@ -3,6 +3,7 @@
 [alias]
   st = status
   please = push --force-with-lease
+  smush = !git commit -a --amend --no-edit && git please
   untracked = ls-files --others --exclude-standard
   msg = log --format=%B -n 1
   steal = "!f() { git checkout \"$1\" -- \"$2\"; }; f"
