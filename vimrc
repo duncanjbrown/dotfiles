@@ -237,6 +237,8 @@ lua << EOF
 
   nvim_lsp.clojure_lsp.setup {}
 
+  nvim_lsp.pylsp.setup {}
+
   nvim_lsp.rust_analyzer.setup {
     settings = {
       ["rust-analyzer"] = {
