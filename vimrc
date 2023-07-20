@@ -1,7 +1,5 @@
 call plug#begin()
 
-let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
-
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'williamboman/mason.nvim'
 
