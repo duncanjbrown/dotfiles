@@ -60,3 +60,6 @@ cask 'spotify'
 cask 'postman'
 cask 'zoom'
 cask 'microsoft-teams'
+
+# Cloud CLIs
+cask 'google-cloud-sdk'
