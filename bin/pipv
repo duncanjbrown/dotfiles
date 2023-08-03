@@ -1,0 +1,15 @@
+#!/usr/bin/env bb
+
+(require '[babashka.http-client :as http])
+(require '[cheshire.core :as json])
+(require '[version-clj.core :as v])
+
+(defn get-package-versions [pkg]
+  (let [url (format "https://pypi.org/pypi/%s/json" pkg)
+        response (http/get url)
+        parsed-json (json/parse-string (:body response))
+        releases (get parsed-json "releases")]
+    (sort v/version-compare (keys releases))))
+
+(let [[pkg-name] *command-line-args*]
+  (run! println (get-package-versions pkg-name)))

@@ -65,6 +65,7 @@ publicip                  # get the public IP of your machine
 viewcsv <file>            # print a CSV file in columns
 whozat <port>             # get the process/es listening on a given port
 evict-listeners <port>    # kill the process/es listening on a given port
+pipv                      # list available versions of a pip package
 ```
 
 ## Options
