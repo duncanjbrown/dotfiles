@@ -3,3 +3,5 @@ set tabstop=2
 set expandtab 
 set foldmethod=indent
 set nofoldenable
+
+nnoremap <Leader>R :Rubofix<CR>

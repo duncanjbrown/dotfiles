@@ -55,7 +55,6 @@ nmap <Leader>fc :let @*=expand("%:p")<CR>
 noremap H ^
 noremap L g$
 
-nnoremap <Leader>R :Rubofix<CR>
 vnoremap <Leader>ht :TidyHTMLFragment<CR>
 
 " Macro repetition
