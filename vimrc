@@ -60,7 +60,6 @@ Plug 'clojure-vim/vim-jack-in'
 Plug 'venantius/vim-cljfmt'
 Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
-Plug 'lepture/vim-jinja'
 Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'rust-lang/rust.vim'
 Plug 'slim-template/vim-slim'
