@@ -64,6 +64,7 @@ Plug 'lepture/vim-jinja'
 Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'rust-lang/rust.vim'
 Plug 'slim-template/vim-slim'
+Plug 'preservim/vim-markdown'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
