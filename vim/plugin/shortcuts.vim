@@ -16,6 +16,9 @@ noremap  <Leader>G :GV<CR>
 inoremap <C-c> <Esc>
 imap jj <Esc>
 
+" apply formatprg to buffer
+nnoremap <leader>R :let save_cursor = getcurpos()<CR>gggqG:call setpos('.', save_cursor)<CR>:echo "✨ formatted"<CR>
+
 " Fzf
 nnoremap <Leader>ff :Ag<CR>
 nnoremap <Leader>bb :Buffers<CR>

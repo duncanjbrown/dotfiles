@@ -4,4 +4,5 @@ set expandtab
 set foldmethod=indent
 set nofoldenable
 
-nnoremap <Leader>R :Rubofix<CR>
+set formatprg=bundle\ exec\ rubocop\ --auto-correct\ --no-color\ --stderr\ --stdin\ %\ 2>/dev/null
+

@@ -5,8 +5,6 @@ autocmd! BufEnter,BufWritePost *.scss Neomake
 
 let g:neomake_ruby_rubocop_args = ['bundle', 'exec', 'rubocop']
 let g:neomake_ruby_rubocop_exe = '/usr/bin/env'
-command Rubofix ! bundle exec rubocop -a %
-command Blackfix ! black %
 
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 let g:neomake_typescript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
