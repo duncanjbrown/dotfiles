@@ -58,6 +58,12 @@ rff                       # re-run failing specs, bailing on first failure
 rubogit                   # run Rubocop on changed files
 ```
 
+### python
+
+```
+pm                        # python manage.py
+```
+
 ### misc
 
 ```
