@@ -64,6 +64,7 @@ Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'rust-lang/rust.vim'
 Plug 'slim-template/vim-slim'
 Plug 'preservim/vim-markdown'
+Plug 'tartansandal/vim-compiler-pytest'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'

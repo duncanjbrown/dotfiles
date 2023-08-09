@@ -8,6 +8,8 @@ nmap <silent> <leader>ll :silent !tmux split-window -vbd -p 33 "bundle exec rspe
 let test#ruby#rspec#executable = 'RUBYOPT="-W0" bundle exec rspec'
 let test#strategy = 'dispatch'
 
+let test#python#runner = 'pytest'
+
 let g:dispatch_compilers = {
       \ 'RUBYOPT="-W0" bundle exec': '',
-      \ './vendor/bin/': ''}
+      \ 'python3 -m ': ''}
