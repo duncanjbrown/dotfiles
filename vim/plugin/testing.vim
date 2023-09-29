@@ -9,6 +9,7 @@ let test#ruby#rspec#executable = 'RUBYOPT="-W0" bundle exec rspec'
 let test#strategy = 'dispatch'
 
 let test#python#runner = 'pytest'
+let test#python#pytest#options = '--tb=short -q -vv'
 
 let g:dispatch_compilers = {
       \ 'RUBYOPT="-W0" bundle exec': '',
