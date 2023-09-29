@@ -9,7 +9,7 @@
         response (http/get url)
         parsed-json (json/parse-string (:body response))
         releases (get parsed-json "releases")]
-    (sort v/version-compare (keys releases))))
+    (str pkg "~=" (last (sort v/version-compare (keys releases))))))
 
 (let [[pkg-name] *command-line-args*]
-  (run! println (get-package-versions pkg-name)))
+  (println (get-package-versions pkg-name)))
