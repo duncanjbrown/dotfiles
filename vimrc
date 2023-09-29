@@ -240,6 +240,10 @@ lua << EOF
 
   nvim_lsp.pylsp.setup {}
 
+  nvim_lsp.tsserver.setup {
+    cmd = { "npx", "typescript-language-server", "--stdio" }
+  }
+
   nvim_lsp.rust_analyzer.setup {
     settings = {
       ["rust-analyzer"] = {
