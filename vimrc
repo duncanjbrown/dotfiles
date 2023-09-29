@@ -257,7 +257,11 @@ lua << EOF
   vim.g.coq_settings = {
     auto_start = 'shut-up',
   }
+
+  vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
 EOF
+
+autocmd FileType markdown setlocal wrap textwidth=80
 
 let g:git_messenger_always_into_popup = v:true
 
