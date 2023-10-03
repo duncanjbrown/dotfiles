@@ -64,6 +64,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'slim-template/vim-slim'
 Plug 'preservim/vim-markdown'
 Plug 'tartansandal/vim-compiler-pytest'
+Plug 'tweekmonster/django-plus.vim'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
