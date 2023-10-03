@@ -57,6 +57,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # python bins
 export PATH="${HOME}/.local/bin:$PATH"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export WORKON_HOME="~/.virtualenvs"
+. $(asdf where python)/bin/virtualenvwrapper.sh
 
 # gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
