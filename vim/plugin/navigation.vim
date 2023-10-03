@@ -16,6 +16,9 @@ nnoremap ^ 0
 nnoremap <C-k>  :Sayonara!<CR>
 inoremap <C-k>  <Esc>:Sayonara!<CR>i
 
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 " do not lose history when leaving a buffer
 set hidden
 

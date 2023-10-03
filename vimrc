@@ -69,6 +69,9 @@ Plug 'tweekmonster/django-plus.vim'
 " Quickfix
 Plug 'tpope/vim-unimpaired'
 
+" Navigation
+Plug 'preservim/nerdtree'
+
 call plug#end()
 
 if filereadable(expand("~/.vimrc_background"))
