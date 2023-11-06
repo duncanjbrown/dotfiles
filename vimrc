@@ -3,9 +3,15 @@ call plug#begin()
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'williamboman/mason.nvim'
 
+" LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+
+" DAP
 Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'rcarriga/nvim-dap-ui'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -20,7 +26,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'chriskempson/base16-vim'
 
 " Editing
-Plug 'neovim/nvim-lspconfig'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
@@ -285,11 +290,25 @@ lua << EOF
     end, opts)
     end,
   })
+
+  -- nvim-dap
+  local mason_registry = require("mason-registry")
+  local debugpy = mason_registry.get_package("debugpy")
+
+  require('dap-python').setup(debugpy:get_install_path() .. "/venv/bin/python")
+  require('dap-python').test_runner = 'pytest'
+
+  vim.keymap.set('n', '<space>B', function() require('dap').toggle_breakpoint() end)
+  vim.keymap.set('n', '<F5>', function() require('dap-python').test_method() end)
+  vim.keymap.set('n', '<F6>', function() require('dap').step_into() end)
+  vim.keymap.set('n', '<F7>', function() require('dap').step_over() end)
+  vim.keymap.set('n', '<F8>', function() require('dap').step_out() end)
+
+  require("dapui").setup()
+  vim.keymap.set('n', '<F4>', function() require('dapui').toggle() end)
 EOF
 
 autocmd FileType markdown setlocal wrap textwidth=80
-
-let g:git_messenger_always_into_popup = v:true
 
 let g:sayonara_confirm_quit = 1
 
