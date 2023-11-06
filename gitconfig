@@ -45,3 +45,7 @@
 	email = duncanjbrown@gmail.com
 [diff]
 	external = difft
+[log]
+  date=iso
+[blame]
+  coloring=highlightRecent
