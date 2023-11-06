@@ -305,26 +305,26 @@ lua << EOF
 
   require("dapui").setup()
   vim.keymap.set('n', '<F4>', function() require('dapui').toggle() end)
+
+  -- sayonara
+  vim.g.sayonara_confirm_quit = 1
+
+  -- fzf
+  vim.g.fzf_layout = { down = '~40%' }
+  vim.g.fzf_preview_window = {'right:30%', 'ctrl-/'}
+
+  -- conjure
+  vim.g.conjure_log_wrap = 'true'
+  vim.g.conjure_extract_tree_sitter_enabled = 'true'
+  vim.g.clojure_align_subforms = 1
+
+  -- use ag for grepping
+  vim.o.grepprg = ag
+
+  -- keep folds open
+  vim.o.foldenable = false
+
+  vim.cmd 'hi Normal ctermbg=none'
+  vim.cmd 'hi Normal guibg=none'
 EOF
-
-autocmd FileType markdown setlocal wrap textwidth=80
-
-let g:sayonara_confirm_quit = 1
-
-let g:fzf_layout = { 'down': '~40%' }
-let g:fzf_preview_window = ['right:30%', 'ctrl-/']
-
-" Conjure
-let g:conjure#log#wrap = 'true'
-let g:conjure#extract#tree_sitter#enabled = 'true'
-
-" make vim-clojure-static agree with cljfmt
-let g:clojure_align_subforms = 1
-
-set grepprg=ag
-
-hi Normal ctermbg=none
-hi Normal guibg=none
-
-set nofoldenable
 
