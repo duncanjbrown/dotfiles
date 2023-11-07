@@ -43,7 +43,6 @@ Plug 'gregsexton/MatchTag'
 Plug 'kassio/neoterm'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
-Plug 'neomake/neomake'
 Plug 'tpope/vim-eunuch'
 
 " Buffers
@@ -83,6 +82,7 @@ lua << EOF
   vim.g.mapleader = ' '
   vim.g.maplocalleader = ' '
   vim.o.mouse = 'a'
+  vim.o.hidden = true
 
   vim.api.nvim_create_autocmd("TermOpen", {
     pattern = "*",
@@ -100,6 +100,7 @@ lua << EOF
   require('dap-config')
   require('conjure')
   require('whitespace')
+  require('sayonara')
 
   vim.o.grepprg = ag
   vim.o.inccommand = 'split'
@@ -108,6 +109,7 @@ lua << EOF
   vim.o.ttimeout = true
   vim.o.ttimeoutlen = 50
 
-  vim.g.sayonara_confirm_quit = 1
+  vim.api.nvim_set_keymap('n', '0', '^', { noremap = true })
+  vim.api.nvim_set_keymap('n', '^', '0', { noremap = true })
 EOF
 
