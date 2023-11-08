@@ -12,3 +12,11 @@ vim.api.nvim_create_autocmd('TermOpen', {
   command = 'set nobuflisted',
 })
 
+-- format buffer with formatprg (where LSP not available)
+vim.api.nvim_set_keymap('n', '<leader>R',
+  ':let save_cursor = getcurpos()<CR>gggqG:call setpos(".", save_cursor)<CR>:echo "✨ formatted"<CR>', { noremap = true })
+
+vim.api.nvim_set_keymap('n', '<Leader>bd', ':Sayonara!<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>bn', ':bn<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>bp', ':bp<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>on', ':on<CR>', { noremap = true })

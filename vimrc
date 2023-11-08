@@ -81,18 +81,12 @@ call plug#end()
 lua << EOF
   vim.g.mapleader = ' '
   vim.g.maplocalleader = ' '
-  vim.o.mouse = 'a'
-  vim.o.hidden = true
-
-  vim.api.nvim_create_autocmd("TermOpen", {
-    pattern = "*",
-    command = "setlocal nonumber norelativenumber",
-  })
 
   require("mason").setup()
 
   require('appearance')
-  require('fzf')
+  require('completion')
+  require('fzf-config')
   require('tree-sitter')
   require('clipboard')
   require('disk')
@@ -101,15 +95,48 @@ lua << EOF
   require('conjure')
   require('whitespace')
   require('sayonara')
-
-  vim.o.grepprg = ag
-  vim.o.inccommand = 'split'
+  require('buffers')
+  require('testing')
+  require('terminal-config')
 
   vim.o.updatetime = 300
   vim.o.ttimeout = true
   vim.o.ttimeoutlen = 50
+  vim.o.mouse = 'a'
+  vim.o.hidden = true
+  vim.o.grepprg = ag
+  vim.o.inccommand = 'split'
+  vim.o.incsearch = true
+  vim.o.hlsearch = true
+  vim.o.smartcase = true
 
+  -- deal with terminal not having proper ftplugin
+  vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    command = "setlocal nonumber norelativenumber",
+  })
+
+  vim.api.nvim_create_autocmd("BufReadPost", {
+    pattern = "quickfix",
+    callback = function()
+      vim.api.nvim_buf_set_keymap(0, 'n', '<CR>', '<CR>', { noremap = true, silent = true, buffer = true })
+    end,
+  })
+
+  -- generic keymaps
   vim.api.nvim_set_keymap('n', '0', '^', { noremap = true })
   vim.api.nvim_set_keymap('n', '^', '0', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader>fs', ':w<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '\\', ':', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader>c', ':TComment<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('v', '<Leader>c', ':TComment<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader><Tab>', '<C-^>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader>ft', ':NERDTreeToggle<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader>kk', ':BufOnly<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Tab>', '%', { noremap = true })
+  vim.api.nvim_set_keymap('v', '<Tab>', '%', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<Leader>fc', ':let @*=expand("%:p")<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('n', '<CR>', ':noh<CR>', { noremap = true, silent = true })
 EOF
 

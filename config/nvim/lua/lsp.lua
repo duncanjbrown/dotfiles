@@ -11,6 +11,17 @@ nvim_lsp.solargraph.setup{
 
 nvim_lsp.clojure_lsp.setup {}
 nvim_lsp.pylsp.setup {}
+nvim_lsp.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {
+          'vim'
+        },
+      },
+    }
+  }
+}
 nvim_lsp.marksman.setup{}
 nvim_lsp.tsserver.setup {
   cmd = { "npx", "typescript-language-server", "--stdio" }
@@ -42,7 +53,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<space>nn', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<space>f', function()
+    vim.keymap.set({'n', 'v'}, '<space>f', function()
       vim.lsp.buf.format { async = true }
     end, opts)
   end,
