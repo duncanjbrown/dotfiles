@@ -124,7 +124,7 @@ lua << EOF
   vim.api.nvim_create_autocmd("BufReadPost", {
     pattern = "quickfix",
     callback = function()
-      vim.api.nvim_buf_set_keymap(0, 'n', '<CR>', '<CR>', { noremap = true, silent = true, buffer = true })
+      vim.api.nvim_buf_set_keymap(0, 'n', '<CR>', '<CR>', { noremap = true, silent = true })
     end,
   })
 
