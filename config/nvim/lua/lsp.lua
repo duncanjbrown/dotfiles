@@ -1,7 +1,8 @@
 local nvim_lsp = require('lspconfig')
-
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 nvim_lsp.solargraph.setup{
   cmd = { "bundle", "exec", "solargraph", "stdio" },
+  capabilities = capabilities,
   settings = {
     solargraph = {
       completion = true,
@@ -9,9 +10,14 @@ nvim_lsp.solargraph.setup{
   }
 }
 
-nvim_lsp.clojure_lsp.setup {}
-nvim_lsp.pylsp.setup {}
+nvim_lsp.clojure_lsp.setup {
+  capabilities = capabilities,
+}
+nvim_lsp.pylsp.setup {
+  capabilities = capabilities,
+}
 nvim_lsp.lua_ls.setup {
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -22,11 +28,15 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
-nvim_lsp.marksman.setup{}
+nvim_lsp.marksman.setup{
+  capabilities = capabilities,
+}
 nvim_lsp.tsserver.setup {
+  capabilities = capabilities,
   cmd = { "npx", "typescript-language-server", "--stdio" }
 }
 nvim_lsp.rust_analyzer.setup {
+  capabilities = capabilities,
   settings = {
     ["rust-analyzer"] = {
       checkOnSave = {
