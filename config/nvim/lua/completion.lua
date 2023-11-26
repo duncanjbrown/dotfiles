@@ -52,7 +52,18 @@ cmp.setup({
     { name = 'vsnip' }, -- For vsnip users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+  enabled = function()
+    -- disable completion in comments
+    local context = require 'cmp.config.context'
+    -- keep command mode completion enabled when cursor is in a comment
+    if vim.api.nvim_get_mode().mode == 'c' then
+      return true
+    else
+      return not context.in_treesitter_capture("comment")
+          and not context.in_syntax_group("Comment")
+    end
+  end
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
@@ -72,4 +83,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
