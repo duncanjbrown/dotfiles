@@ -10,11 +10,24 @@ nvim_lsp.solargraph.setup{
   }
 }
 
+nvim_lsp.html.setup{
+  capabilities = capabilities,
+  filetypes = {'html', 'htmldjango'}
+}
+
 nvim_lsp.clojure_lsp.setup {
   capabilities = capabilities,
 }
 nvim_lsp.pylsp.setup {
   capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        black = { enabled = true },
+        pyls_isort = { enabled = true },
+      }
+    }
+  }
 }
 nvim_lsp.lua_ls.setup {
   capabilities = capabilities,
@@ -31,9 +44,13 @@ nvim_lsp.lua_ls.setup {
 nvim_lsp.marksman.setup{
   capabilities = capabilities,
 }
+nvim_lsp.remark_ls.setup {
+  settings = {
+    requireConfig = true
+  }
+}
 nvim_lsp.tsserver.setup {
   capabilities = capabilities,
-  cmd = { "npx", "typescript-language-server", "--stdio" }
 }
 nvim_lsp.rust_analyzer.setup {
   capabilities = capabilities,
@@ -69,3 +86,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Change border of documentation hover window, See https://github.com/neovim/neovim/pull/13998.
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "single",
+})
