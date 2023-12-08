@@ -1,65 +1,73 @@
-# Languages
-brew 'ruby-build'
-brew 'asdf'
-
-# Text editing
-brew 'editorconfig'
-brew 'neovim'
-brew 'ctags'
-brew 'the_silver_searcher'
-brew 'html5-tidy'
-
-# Shell environment
-brew 'zsh'
-brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
-brew 'tmux'
-brew 'tree'
-brew 'highlight'
-brew 'ssh-copy-id'
-brew 'fzf'
-
-# Dotfiles utilities
-tap 'thoughtbot/formulae'
-brew 'thoughtbot/formulae/rcm'
-
-# Networking
-brew 'curl'
-brew 'ncdu'
-brew 'netcat'
-brew 'openssl'
-brew 'wget'
-
-# Databases
-brew 'postgresql'
-
-# Testing
-brew 'shellcheck'
-
-# Ops
-brew 'awscli'
-brew 'cf'
-
-# Version control
-brew 'git'
-brew 'diff-so-fancy'
-brew 'tig'
-
-# Usefuls
-brew 'htop'
-brew 'cmake'
-brew 'pidof'
-brew 'graphviz'
-
-# Desktop software
-cask 'google-chrome'
-cask 'dropbox'
+brew "asdf"
+brew "awscli"
+brew "azure-cli"
+brew "borkdude/brew/babashka"
+brew "cf"
+brew "clojure-lsp/brew/clojure-lsp-native"
+brew "curl"
+brew "diff-so-fancy"
+brew "dos2unix"
+brew "editorconfig"
+brew "ffmpeg"
+brew "fontforge"
+brew "fzf"
+brew "git"
+brew "graphviz"
+brew "heroku/brew/heroku"
+brew "highlight"
+brew "htop"
+brew "hub"
+brew "hugo"
+brew "imagemagick"
+brew "jq"
+brew "kubernetes-cli"
+brew "libxslt"
+brew "luarocks"
+brew "markdownlint-cli"
+brew "mdbook"
+brew "ncdu"
+brew "neovim"
+brew "netcat"
+brew "optipng"
+brew "pandoc"
+brew "pidof"
+brew "postgresql@14"
+brew "reattach-to-user-namespace"
+brew "redis", restart_service: true
+brew "shellcheck"
+brew "the_silver_searcher"
+brew "thoughtbot/formulae/rcm"
+brew "tig"
+brew "tmux"
+brew "tree"
+brew "wget"
+brew "zsh"
+brew "zsh-syntax-highlighting"
+cask "chromedriver"
+cask "font-iosevka"
+cask "font-iosevka-nerd-font"
+cask "gimp"
+cask "google-cloud-sdk"
+cask "inkscape"
+cask "kindle"
+cask "pgadmin4"
+cask "qlmarkdown"
+cask "syntax-highlight"
+cask "tic80"
+cask "visual-studio-code"
+cask "vlc"
+cask "zoom"
 cask '1password'
-cask 'hammerspoon'
 cask 'alacritty'
+cask 'dropbox'
+cask 'hammerspoon'
 cask 'spotify'
-cask 'postman'
-cask 'zoom'
-cask 'microsoft-teams'
-
-# Cloud CLIs
-cask 'google-cloud-sdk'
+tap "borkdude/brew"
+tap "clojure-lsp/brew"
+tap "clojure/tools"
+tap "cloudfoundry/tap"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "thoughtbot/formulae"
