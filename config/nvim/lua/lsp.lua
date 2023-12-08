@@ -15,6 +15,10 @@ nvim_lsp.html.setup{
   filetypes = {'html', 'htmldjango'}
 }
 
+nvim_lsp.cssls.setup{
+  capabilities = capabilities,
+}
+
 nvim_lsp.clojure_lsp.setup {
   capabilities = capabilities,
 }
