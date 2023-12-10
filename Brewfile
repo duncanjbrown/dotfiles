@@ -62,6 +62,7 @@ cask 'alacritty'
 cask 'dropbox'
 cask 'hammerspoon'
 cask 'spotify'
+cask 'obsidian'
 tap "borkdude/brew"
 tap "clojure-lsp/brew"
 tap "clojure/tools"
