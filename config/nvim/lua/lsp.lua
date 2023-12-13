@@ -17,6 +17,7 @@ nvim_lsp.html.setup{
 
 nvim_lsp.cssls.setup{
   capabilities = capabilities,
+  filetypes = {'css', 'scss'}
 }
 
 nvim_lsp.clojure_lsp.setup {
