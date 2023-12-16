@@ -16,8 +16,6 @@ source "${HOME}/.bin/tmuxinator.zsh"
 # local configuration
 test -e "${HOME}/.environment" && source "${HOME}/.environment"
 
-eval "$(/usr/local/bin/brew shellenv)"
-
 export EDITOR=nvim
 source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
@@ -45,7 +43,6 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias cf='/usr/local/bin/cf'
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-source "${HOME}/.zsh/asdf"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
@@ -58,7 +55,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="${HOME}/.local/bin:$PATH"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export WORKON_HOME="~/.virtualenvs"
-. $(asdf where python)/bin/virtualenvwrapper.sh
+# . $(asdf where python)/bin/virtualenvwrapper.sh
 
 # gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
@@ -66,3 +63,4 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 ulimit -n 1024
 
+export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
