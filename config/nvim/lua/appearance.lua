@@ -1,12 +1,6 @@
 -- true color support
 vim.o.termguicolors = true
 
--- read colour scheme from base16's conventional ~/.vimrc_background file
-local vimrc_background = vim.fn.expand("~/.vimrc_background")
-if vim.fn.filereadable(vimrc_background) == 1 then
-  vim.cmd("source " .. vimrc_background)
-end
-
 -- Highlight matching parentheses
 vim.o.showmatch = true
 
