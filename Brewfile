@@ -1,3 +1,12 @@
+tap "borkdude/brew"
+tap "clojure-lsp/brew"
+tap "clojure/tools"
+tap "cloudfoundry/tap"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "thoughtbot/formulae"
 brew "asdf"
 brew "awscli"
 brew "azure-cli"
@@ -63,12 +72,3 @@ cask 'dropbox'
 cask 'hammerspoon'
 cask 'spotify'
 cask 'obsidian'
-tap "borkdude/brew"
-tap "clojure-lsp/brew"
-tap "clojure/tools"
-tap "cloudfoundry/tap"
-tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
-tap "thoughtbot/formulae"
