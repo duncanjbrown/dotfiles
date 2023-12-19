@@ -34,3 +34,5 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.scrolloff = 12
 
+vim.cmd [[highlight def link @text.diff.add DiffAdded]]
+vim.cmd [[highlight def link @text.diff.delete DiffRemoved]]
