@@ -30,8 +30,9 @@ nvim_lsp.pylsp.setup {
   settings = {
     pylsp = {
       plugins = {
-        black = { enabled = true },
-        pyls_isort = { enabled = true },
+        -- black = { enabled = true },
+        -- pyls_isort = { enabled = true },
+        ruff = { enabled = true },
       }
     }
   }
