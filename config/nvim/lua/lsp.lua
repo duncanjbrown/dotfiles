@@ -21,6 +21,10 @@ nvim_lsp.cssls.setup {
   filetypes = { 'css', 'scss' }
 }
 
+nvim_lsp.tailwindcss.setup {
+  capabilities = capabilities,
+}
+
 nvim_lsp.clojure_lsp.setup {
   capabilities = capabilities,
 }
