@@ -35,6 +35,7 @@ brew "libxslt"
 brew "luarocks"
 brew "markdownlint-cli"
 brew "mdbook"
+brew "most"
 brew "ncdu"
 brew "neovim"
 brew "netcat"
@@ -71,5 +72,5 @@ cask '1password'
 cask 'alacritty'
 cask 'dropbox'
 cask 'hammerspoon'
-cask 'spotify'
 cask 'obsidian'
+cask 'spotify'

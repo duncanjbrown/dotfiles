@@ -64,3 +64,4 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 ulimit -n 1024
 
 export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+export PAGER="most"
