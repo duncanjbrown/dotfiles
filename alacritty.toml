@@ -1,0 +1,28 @@
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[font]
+size = 15.0
+
+[font.normal]
+family = "Iosevka Nerd Font"
+style = "Light"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+decorations = "full"
+dynamic_padding = false
+opacity = 0.97
+title = "🐚"
