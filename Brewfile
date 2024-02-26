@@ -67,7 +67,6 @@ cask "syntax-highlight"
 cask "tic80"
 cask "visual-studio-code"
 cask "vlc"
-cask "zoom"
 cask '1password'
 cask 'alacritty'
 cask 'dropbox'
