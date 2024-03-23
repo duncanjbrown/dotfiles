@@ -55,6 +55,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="${HOME}/.local/bin:$PATH"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export WORKON_HOME="~/.virtualenvs"
+export VIRTUALENVWRAPPER_PYTHON=$(which python)
 . $(asdf where python)/bin/virtualenvwrapper.sh
 
 # gcloud

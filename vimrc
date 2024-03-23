@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'dstein64/vim-startuptime'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'williamboman/mason.nvim'
 
@@ -9,9 +10,9 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 
 " DAP
-Plug 'mfussenegger/nvim-dap'
-Plug 'mfussenegger/nvim-dap-python'
-Plug 'rcarriga/nvim-dap-ui'
+" Plug 'mfussenegger/nvim-dap'
+" Plug 'mfussenegger/nvim-dap-python'
+" Plug 'rcarriga/nvim-dap-ui'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -41,41 +42,52 @@ Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
 Plug 'gregsexton/MatchTag'
 
 " External processes
-Plug 'kassio/neoterm'
+" Plug 'kassio/neoterm'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
+" Plug 'j-hui/fidget.nvim'
 
 " Buffers
 Plug 'schickling/vim-bufonly'
 Plug 'mhinz/vim-sayonara'
 
-" Syntax and language
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rbenv'
-Plug 'tpope/vim-bundler'
-Plug 'vim-ruby/vim-ruby'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'editorconfig/editorconfig-vim'
+" Ruby
+" Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rbenv'
+" Plug 'tpope/vim-bundler'
+" Plug 'vim-ruby/vim-ruby'
+" Plug 'nelstrom/vim-textobj-rubyblock'
+
+" JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'stephpy/vim-yaml'
+
+" clj
 Plug 'Olical/conjure'
 Plug 'clojure-vim/vim-jack-in'
-Plug 'radenling/vim-dispatch-neovim'
 Plug 'venantius/vim-cljfmt'
 Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-clojure-static'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'rust-lang/rust.vim'
-Plug 'slim-template/vim-slim'
-Plug 'preservim/vim-markdown'
+
+" py
 Plug 'tartansandal/vim-compiler-pytest'
 Plug 'tweekmonster/django-plus.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'Vimjas/vim-python-pep8-indent'
+
+" rs
+" Plug 'rust-lang/rust.vim'
+
+Plug 'editorconfig/editorconfig-vim'
+Plug 'stephpy/vim-yaml'
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'slim-template/vim-slim'
+Plug 'preservim/vim-markdown'
 
 " Quickfix
 Plug 'tpope/vim-unimpaired'
@@ -105,12 +117,14 @@ lua << EOF
   require('disk')
   require('conjure')
   require('lsp')
-  require('dap-config')
+  --require('dap-config')
   require('whitespace')
   require('sayonara')
   require('buffers')
   require('testing')
   require('terminal-config')
+
+  -- require("fidget").setup {}
 
   vim.o.updatetime = 300
   vim.o.ttimeout = true
