@@ -15,6 +15,7 @@ vim.g['test#python#pytest#options'] = '--tb=short -q -vv'
 vim.g.dispatch_compilers = {
     ['RUBYOPT="-W0" bundle exec'] = '',
     ['python3 -m '] = '',
-    ['poetry run '] = ''
+    ['poetry run '] = '',
+    ['NO_COLOR=1 poetry run '] = ''
 }
 
