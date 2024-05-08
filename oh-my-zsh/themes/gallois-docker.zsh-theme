@@ -12,6 +12,13 @@ stopped_jobs_status() {
   fi
 }
 
+aws_vault_status() {
+  local vault="$(printenv AWS_VAULT)"
+  if [ -n "$vault" ]; then
+    echo "$vault "
+  fi
+}
+
 #Customized git status, oh-my-zsh currently does not allow render dirty status before branch
 git_custom_status() {
   local cb=$(git_current_branch)
@@ -20,17 +27,6 @@ git_custom_status() {
   fi
 }
 
-docker_machine_status() {
-  if [ -n "$DOCKER_MACHINE_NAME" ]; then
-    echo "Docker Machine: $DOCKER_MACHINE_NAME "
-  fi
-}
+RPS1='$(git_custom_status) $EPS1'
 
-# RVM component of prompt
-ZSH_THEME_RVM_PROMPT_PREFIX="%{$fg[red]%}["
-ZSH_THEME_RVM_PROMPT_SUFFIX="]%{$reset_color%}"
-
-# Combine it all into a final right-side prompt
-RPS1='$(git_custom_status)$(ruby_prompt_info) $EPS1'
-
-PROMPT='%{$fg[cyan]%}$(stopped_jobs_status)$(docker_machine_status)%~% %(?.%{$fg[green]%}.%{$fg[red]%})%B %%%b '
+PROMPT='%{$fg[red]%}$(aws_vault_status)%{$fg[cyan]%}$(stopped_jobs_status)%~% %(?.%{$fg[green]%}.%{$fg[red]%}) :: 
