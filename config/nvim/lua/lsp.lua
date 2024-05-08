@@ -29,6 +29,10 @@ nvim_lsp.clojure_lsp.setup {
   capabilities = capabilities,
 }
 
+nvim_lsp.jsonls.setup {
+  capabilities = capabilities,
+}
+
 nvim_lsp.pylsp.setup {
   capabilities = capabilities,
   settings = {
@@ -91,7 +95,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<space>nn', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set({ 'n', 'v' }, '<space>f', function()
+    vim.keymap.set({ 'n', 'v' }, '<space>F', function()
       vim.lsp.buf.format { async = true }
     end, opts)
   end,
