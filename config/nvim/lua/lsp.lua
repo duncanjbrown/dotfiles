@@ -16,6 +16,10 @@ nvim_lsp.html.setup {
   filetypes = { 'html', 'htmldjango' }
 }
 
+nvim_lsp.taplo.setup {
+  capabilities = capabilities,
+}
+
 nvim_lsp.cssls.setup {
   capabilities = capabilities,
   filetypes = { 'css', 'scss' }
@@ -39,7 +43,9 @@ nvim_lsp.pylsp.setup {
     pylsp = {
       plugins = {
         -- black = { enabled = true },
-        -- pyls_isort = { enabled = true },
+        black = { enabled = false },
+        pycodestyle = { enabled = false },
+        pyls_isort = { enabled = true },
         ruff = { enabled = true },
       }
     }

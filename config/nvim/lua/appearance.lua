@@ -4,10 +4,10 @@ vim.o.termguicolors = true
 -- Highlight matching parentheses
 vim.o.showmatch = true
 
-vim.cmd [[highlight Comment cterm=italic gui=italic]]
-vim.cmd [[highlight VertSplit guibg=NONE]]
-vim.cmd [[hi Normal ctermbg=none]]
-vim.cmd [[hi Normal guibg=none]]
+-- vim.cmd [[highlight Comment cterm=italic gui=italic]]
+-- vim.cmd [[highlight VertSplit guibg=NONE]]
+-- vim.cmd [[hi Normal ctermbg=none]]
+-- vim.cmd [[hi Normal guibg=none]]
 
 -- numbers
 vim.o.number = true

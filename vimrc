@@ -10,9 +10,10 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 
 " DAP
-" Plug 'mfussenegger/nvim-dap'
-" Plug 'mfussenegger/nvim-dap-python'
-" Plug 'rcarriga/nvim-dap-ui'
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'rcarriga/nvim-dap-ui'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -39,7 +40,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tomtom/tcomment_vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'junegunn/vim-easy-align'
@@ -107,7 +107,9 @@ lua << EOF
   vim.g.mapleader = ' '
   vim.g.maplocalleader = ' '
 
-  require("mason").setup()
+  require("mason").setup({
+    PATH = "append"
+  })
 
   require('appearance')
   require('completion')
@@ -117,7 +119,7 @@ lua << EOF
   require('disk')
   require('conjure')
   require('lsp')
-  --require('dap-config')
+  require('dap-config')
   require('whitespace')
   require('sayonara')
   require('buffers')
@@ -150,14 +152,15 @@ lua << EOF
     end,
   })
 
+  vim.opt.grepprg = "rg --vimgrep"
+  vim.opt.grepformat = "%f:%l:%c:%m"
+
   -- generic keymaps
   vim.api.nvim_set_keymap('n', '0', '^', { noremap = true })
   vim.api.nvim_set_keymap('n', '^', '0', { noremap = true })
   vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>', { noremap = true })
   vim.api.nvim_set_keymap('n', '<Leader>fs', ':w<CR>', { noremap = true })
   vim.api.nvim_set_keymap('n', '\\', ':', { noremap = true })
-  vim.api.nvim_set_keymap('n', '<Leader>c', ':TComment<CR>', { noremap = true })
-  vim.api.nvim_set_keymap('v', '<Leader>c', ':TComment<CR>', { noremap = true })
   vim.api.nvim_set_keymap('n', '<Leader><Tab>', '<C-^>', { noremap = true })
   vim.api.nvim_set_keymap('n', '<Leader>ft', ':NERDTreeToggle<CR>', { noremap = true })
   vim.api.nvim_set_keymap('n', '<Leader>kk', ':BufOnly<CR>', { noremap = true })
