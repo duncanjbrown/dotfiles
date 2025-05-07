@@ -37,16 +37,24 @@ nvim_lsp.jsonls.setup {
   capabilities = capabilities,
 }
 
+nvim_lsp.ruff.setup {}
+
 nvim_lsp.pylsp.setup {
   capabilities = capabilities,
+  -- cmd = {"pylsp", "-vvv", "--log-file", "/tmp/lsp.log"},
   settings = {
     pylsp = {
       plugins = {
-        -- black = { enabled = true },
-        black = { enabled = false },
-        pycodestyle = { enabled = false },
-        pyls_isort = { enabled = true },
-        ruff = { enabled = true },
+        pyflakes = {
+          enabled = false -- leave it to ruff
+        },
+        isort = {
+          enabled = true
+        },
+        pylsp_mypy = {
+          enabled = false,
+          live_mode = false,
+        },
       }
     }
   }
@@ -69,7 +77,7 @@ nvim_lsp.marksman.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
   capabilities = capabilities,
 }
 

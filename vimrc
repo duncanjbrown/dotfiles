@@ -108,7 +108,7 @@ lua << EOF
   vim.g.maplocalleader = ' '
 
   require("mason").setup({
-    PATH = "append"
+    PATH = "prepend"
   })
 
   require('appearance')
@@ -118,8 +118,9 @@ lua << EOF
   require('clipboard')
   require('disk')
   require('conjure')
+  require('diagnostics')
   require('lsp')
-  require('dap-config')
+  -- require('dap-config')
   require('whitespace')
   require('sayonara')
   require('buffers')

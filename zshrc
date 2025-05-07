@@ -7,7 +7,7 @@
 # Oh My Zsh
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="gallois-docker"
-plugins=(git asdf)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # tmuxinator
@@ -52,3 +52,5 @@ ulimit -n 1024
 export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
 export PAGER="less"
 export PATH="/Users/duncan.brown/.local/bin:$PATH"
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
