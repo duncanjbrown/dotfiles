@@ -10,10 +10,10 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 
 " DAP
-Plug 'mfussenegger/nvim-dap'
-Plug 'mfussenegger/nvim-dap-python'
-Plug 'nvim-neotest/nvim-nio'
-Plug 'rcarriga/nvim-dap-ui'
+"Plug 'mfussenegger/nvim-dap'
+"Plug 'mfussenegger/nvim-dap-python'
+"Plug 'nvim-neotest/nvim-nio'
+"Plug 'rcarriga/nvim-dap-ui'
 
 " Git
 Plug 'tpope/vim-fugitive'
