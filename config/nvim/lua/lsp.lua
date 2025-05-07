@@ -37,7 +37,7 @@ nvim_lsp.jsonls.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.ruff.setup {}
+-- nvim_lsp.ruff.setup {}
 
 nvim_lsp.pylsp.setup {
   capabilities = capabilities,
@@ -45,10 +45,7 @@ nvim_lsp.pylsp.setup {
   settings = {
     pylsp = {
       plugins = {
-        pyflakes = {
-          enabled = false -- leave it to ruff
-        },
-        isort = {
+        ruff = {
           enabled = true
         },
         pylsp_mypy = {
@@ -110,7 +107,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     vim.keymap.set({ 'n', 'v' }, '<space>F', function()
-      vim.lsp.buf.format { async = true }
+      vim.lsp.buf.format {
+        async = true,
+      }
     end, opts)
   end,
 })

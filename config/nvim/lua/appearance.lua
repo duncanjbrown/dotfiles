@@ -19,7 +19,7 @@ vim.o.ruler = true
 vim.o.wildmenu = true
 vim.wo.cursorline = true
 vim.o.statusline = "%f%= %{&filetype}"  -- Filetype
-vim.o.statusline = vim.o.statusline .. " %5l"  -- Current line, with space for 5 characters
+vim.o.statusline = vim.o.statusline .. " %5l,%c"  -- Current line, with space for 5 characters
 vim.o.statusline = vim.o.statusline .. "/%L"  -- Total lines
 
 -- window title
