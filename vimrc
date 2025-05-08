@@ -79,6 +79,7 @@ Plug 'tartansandal/vim-compiler-pytest'
 Plug 'tweekmonster/django-plus.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'karloskar/poetry-nvim'
 
 " rs
 " Plug 'rust-lang/rust.vim'

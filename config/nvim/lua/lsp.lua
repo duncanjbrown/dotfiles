@@ -1,5 +1,6 @@
 local nvim_lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require("poetry-nvim").setup() -- set vim.env.VIRTUAL_ENV to poetry if it's present
 
 nvim_lsp.solargraph.setup {
   cmd = { "bundle", "exec", "solargraph", "stdio" },
@@ -39,6 +40,17 @@ nvim_lsp.jsonls.setup {
 
 -- nvim_lsp.ruff.setup {}
 
+local function which_python()
+  local pythonprog
+  if vim.env.VIRTUAL_ENV then
+    pythonprog = vim.env.VIRTUAL_ENV .. "/bin/python"
+  else
+    pythonprog = "python"
+  end
+
+  return pythonprog
+end
+
 nvim_lsp.pylsp.setup {
   capabilities = capabilities,
   -- cmd = {"pylsp", "-vvv", "--log-file", "/tmp/lsp.log"},
@@ -52,6 +64,7 @@ nvim_lsp.pylsp.setup {
           enabled = false,
           live_mode = false,
         },
+        jedi_completion = { fuzzy = true, environment = which_python() },
       }
     }
   }
