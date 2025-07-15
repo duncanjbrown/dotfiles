@@ -35,15 +35,21 @@ require("lazy").setup({
   -- LSP
   {
     "williamboman/mason.nvim",
+    cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate" },
     config = function()
       require("mason").setup({
         PATH = "prepend"
       })
     end
   },
-  { "neovim/nvim-lspconfig" },
+  {
+    "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
+  },
   {
     "williamboman/mason-lspconfig.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = { "neovim/nvim-lspconfig", "williamboman/mason.nvim" },
     config = function()
       require('lsp')
     end
