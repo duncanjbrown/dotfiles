@@ -150,7 +150,27 @@ require("lazy").setup({
   { "tpope/vim-unimpaired" },
 
   -- Navigation
-  { "preservim/nerdtree" },
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup({
+        sort_by = "case_sensitive",
+        view = {
+          width = 30,
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          dotfiles = false,
+        },
+        git = {
+          ignore = false,
+        },
+      })
+    end,
+  },
 })
 
 -- Base16 theme setup
@@ -197,7 +217,7 @@ vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>fs', ':w<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '\\', ':', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><Tab>', '<C-^>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>ft', ':NERDTreeToggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>ft', ':NvimTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>kk', ':BufOnly<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Tab>', '%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<Tab>', '%', { noremap = true })
