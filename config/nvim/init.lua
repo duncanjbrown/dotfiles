@@ -27,6 +27,7 @@ require("lazy").setup({
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    event = "BufRead",
     config = function()
       require('tree-sitter')
     end
@@ -88,12 +89,11 @@ require("lazy").setup({
   { "hrsh7th/cmp-cmdline" },
   {
     "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
     config = function()
       require('completion')
     end
   },
-  { "hrsh7th/cmp-vsnip" },
-  { "hrsh7th/vim-vsnip" },
 
   -- Text objects and editing
   { "kana/vim-textobj-entire", dependencies = { "kana/vim-textobj-user" } },
@@ -122,19 +122,15 @@ require("lazy").setup({
     end
   },
 
-  -- Language specific
-  { "pangloss/vim-javascript" },
-  { "mxw/vim-jsx" },
-
   -- Clojure
   {
     "Olical/conjure",
+    lazy = true,
+    ft = { "clojure", "clojurescript" },
     config = function()
       require('conjure')
     end
   },
-  { "clojure-vim/vim-jack-in" },
-  { "venantius/vim-cljfmt" },
   { "bhurlow/vim-parinfer" },
   { "guns/vim-clojure-static" },
 
@@ -159,6 +155,11 @@ require("lazy").setup({
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = true,
+    cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeClose", "NvimTreeFocus" },
+    keys = {
+      { "<Leader>ft", ":NvimTreeToggle<CR>", desc = "Toggle nvim-tree" },
+    },
     config = function()
       require("nvim-tree").setup({
         sort_by = "case_sensitive",
@@ -223,7 +224,6 @@ vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>fs', ':w<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '\\', ':', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><Tab>', '<C-^>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>ft', ':NvimTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>kk', ':BufOnly<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Tab>', '%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<Tab>', '%', { noremap = true })
