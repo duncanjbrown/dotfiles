@@ -12,11 +12,6 @@ show_nothing_to_do_message() {
   echo
 }
 
-echo "Symlinking neovim config from vim"
-ln -sf ~/.vim ~/.config/nvim
-ln -sf ~/.vimrc ~/.config/nvim/init.vim
-show_done_message
-
 echo "Checking for tmux plugin manager"
 if [ -d "$HOME/.tmux/plugins/tpm" ]
 then
@@ -30,8 +25,4 @@ echo "Enabling italics in tmux & colours in terminal emacs"
 tic -x -o ~/.terminfo ~/.dotfiles/terminal/tmux-256color.terminfo
 tic -x -o ~/.terminfo ~/.dotfiles/terminal/xterm-256color-italic.terminfo
 tic -x -o ~/.terminfo ~/.dotfiles/terminal/xterm-24bit.terminfo
-show_done_message
-
-echo "Installing vim plugins"
-nvim +PlugUpdate
 show_done_message
