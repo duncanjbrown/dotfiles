@@ -57,8 +57,17 @@ require("lazy").setup({
   },
 
   -- Git
-  { "tpope/vim-fugitive" },
-  { "airblade/vim-gitgutter" },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",         -- required
+      "sindrets/diffview.nvim",        -- optional - Diff integration
+    },
+    keys = {
+      { "<Leader>ng", ":Neogit<CR>", desc = "Toggle Neogit" },
+    },
+  },
+  { "lewis6991/gitsigns.nvim" },
 
   -- FZF
   {
@@ -230,12 +239,13 @@ vim.api.nvim_set_keymap('n', '<Tab>', '%', { noremap = true })
 vim.api.nvim_set_keymap('v', '<Tab>', '%', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>fc', ':let @*=expand("%:p")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<CR>', ':noh<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>tn', ':tabn<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>tp', ':tabp<CR>', { noremap = true, silent = true })
 
 -- Load remaining modules
 require('buffers')
 require('clipboard')
 require('disk')
-require('diagnostics')
 require('whitespace')
 require('terminal-config')
 
