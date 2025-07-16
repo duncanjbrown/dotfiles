@@ -58,7 +58,6 @@ require("lazy").setup({
 
   -- Git
   { "tpope/vim-fugitive" },
-  { "tpope/vim-rhubarb" },
   { "airblade/vim-gitgutter" },
 
   -- FZF
@@ -83,16 +82,18 @@ require("lazy").setup({
   },
 
   -- Completion
-  { "hrsh7th/cmp-nvim-lsp" },
-  { "hrsh7th/cmp-buffer" },
-  { "hrsh7th/cmp-path" },
-  { "hrsh7th/cmp-cmdline" },
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    event = { "CmdlineEnter", "InsertEnter" },
     config = function()
       require('completion')
-    end
+    end,
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline"
+    }
   },
 
   -- Text objects and editing
