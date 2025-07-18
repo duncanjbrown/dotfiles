@@ -67,7 +67,7 @@ require("lazy").setup({
       { "<Leader>ng", ":Neogit<CR>", desc = "Toggle Neogit" },
     },
   },
-  { "lewis6991/gitsigns.nvim" },
+  { "lewis6991/gitsigns.nvim",  event = "BufReadPre" },
 
   -- FZF
   {
