@@ -29,8 +29,20 @@ require("lazy").setup({
     build = ":TSUpdate",
     event = "BufRead",
     config = function()
-      require('tree-sitter')
-    end
+      local treesitter = require("nvim-treesitter")
+      treesitter.setup()
+          treesitter.install {
+            "python", "ruby", "javascript", "html", "css", "clojure", "rust", "go", "lua"
+          }
+
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { "python", "ruby", "javascript", "html", "css", "clojure", "rust", "go", "lua" },
+        callback = function()
+          vim.treesitter.start()
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
+    end,
   },
 
   -- LSP

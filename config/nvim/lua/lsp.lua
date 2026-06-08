@@ -1,8 +1,15 @@
-local nvim_lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("poetry-nvim").setup() -- set vim.env.VIRTUAL_ENV to poetry if it's present
 
-nvim_lsp.solargraph.setup {
+local function which_python()
+  if vim.env.VIRTUAL_ENV then
+    return vim.env.VIRTUAL_ENV .. "/bin/python"
+  else
+    return "python"
+  end
+end
+
+vim.lsp.config('solargraph', {
   cmd = { "bundle", "exec", "solargraph", "stdio" },
   capabilities = capabilities,
   settings = {
@@ -10,55 +17,41 @@ nvim_lsp.solargraph.setup {
       completion = true,
     }
   }
-}
+})
 
-nvim_lsp.html.setup {
+vim.lsp.config('html', {
   capabilities = capabilities,
-  filetypes = { 'html', 'htmldjango' }
-}
+  filetypes = { 'html', 'htmldjango' },
+})
 
-nvim_lsp.taplo.setup {
+vim.lsp.config('taplo', {
   capabilities = capabilities,
-}
+})
 
-nvim_lsp.cssls.setup {
+vim.lsp.config('cssls', {
   capabilities = capabilities,
-  filetypes = { 'css', 'scss' }
-}
+  filetypes = { 'css', 'scss' },
+})
 
-nvim_lsp.tailwindcss.setup {
+vim.lsp.config('tailwindcss', {
   capabilities = capabilities,
-}
+})
 
-nvim_lsp.clojure_lsp.setup {
+vim.lsp.config('clojure_lsp', {
   capabilities = capabilities,
-}
+})
 
-nvim_lsp.jsonls.setup {
+vim.lsp.config('jsonls', {
   capabilities = capabilities,
-}
+})
 
--- nvim_lsp.ruff.setup {}
-
-local function which_python()
-  local pythonprog
-  if vim.env.VIRTUAL_ENV then
-    pythonprog = vim.env.VIRTUAL_ENV .. "/bin/python"
-  else
-    pythonprog = "python"
-  end
-
-  return pythonprog
-end
-
-nvim_lsp.pylsp.setup {
+vim.lsp.config('pylsp', {
   capabilities = capabilities,
-  -- cmd = {"pylsp", "-vvv", "--log-file", "/tmp/lsp.log"},
   settings = {
     pylsp = {
       plugins = {
         ruff = {
-          enabled = true
+          enabled = true,
         },
         pylsp_mypy = {
           enabled = false,
@@ -68,48 +61,57 @@ nvim_lsp.pylsp.setup {
       }
     }
   }
-}
+})
 
-nvim_lsp.lua_ls.setup {
+vim.lsp.config('lua_ls', {
   capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
-        globals = {
-          'vim'
-        },
+        globals = { 'vim' },
       },
     }
   }
-}
+})
 
-nvim_lsp.marksman.setup {
+vim.lsp.config('marksman', {
   capabilities = capabilities,
-}
+})
 
-nvim_lsp.ts_ls.setup {
+vim.lsp.config('ts_ls', {
   capabilities = capabilities,
-}
+})
 
-nvim_lsp.rust_analyzer.setup {
+vim.lsp.config('rust_analyzer', {
   capabilities = capabilities,
   settings = {
     ["rust-analyzer"] = {
       checkOnSave = {
-        command = "clippy"
+        command = "clippy",
       },
     }
   }
-}
+})
+
+vim.lsp.enable({
+  'solargraph',
+  'html',
+  'taplo',
+  'cssls',
+  'tailwindcss',
+  'clojure_lsp',
+  'jsonls',
+  'pylsp',
+  'lua_ls',
+  'marksman',
+  'ts_ls',
+  'rust_analyzer',
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
-    -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-
-    -- Buffer local mappings.
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
@@ -120,14 +122,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     vim.keymap.set({ 'n', 'v' }, '<space>F', function()
-      vim.lsp.buf.format {
-        async = true,
-      }
+      vim.lsp.buf.format { async = true }
     end, opts)
   end,
 })
 
--- Change border of documentation hover window, See https://github.com/neovim/neovim/pull/13998.
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "single",
 })

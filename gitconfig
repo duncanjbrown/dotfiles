@@ -14,14 +14,11 @@
   rewrite = !HASH=`git log --pretty=oneline | head -n 100 | fzf` && git fixit `echo ${HASH} | awk '{ print $1 }'`
 [core]
   excludesfile = ~/.gitignore_global
-  pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = current
 [init]
   templatedir = ~/.git_template
 	defaultBranch = main
-[diff-so-fancy]
-  markEmptyLines = false
 [rebase]
   autosquash = true
 [commit]
