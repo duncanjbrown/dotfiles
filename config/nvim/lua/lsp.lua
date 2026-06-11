@@ -1,6 +1,23 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("poetry-nvim").setup() -- set vim.env.VIRTUAL_ENV to poetry if it's present
 
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    'html',
+    'taplo',
+    'cssls',
+    'tailwindcss',
+    'clojure_lsp',
+    'jsonls',
+    'pylsp',
+    'lua_ls',
+    'marksman',
+    'ts_ls',
+    'rust_analyzer',
+  },
+  automatic_installation = true,
+})
+
 local function which_python()
   if vim.env.VIRTUAL_ENV then
     return vim.env.VIRTUAL_ENV .. "/bin/python"
