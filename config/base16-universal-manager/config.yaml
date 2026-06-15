@@ -1,0 +1,7 @@
+applications:
+  vim:
+    enabled: true
+    files:
+      default:
+        path: ~/.vim/vim_colors/
+        mode: rewrite
