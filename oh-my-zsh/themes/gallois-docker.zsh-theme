@@ -29,4 +29,4 @@ git_custom_status() {
 
 RPS1='$(git_custom_status) $EPS1'
 
-PROMPT='%{$fg[red]%}$(aws_vault_status)%{$fg[cyan]%}$(stopped_jobs_status)%~% %(?.%{$fg[green]%}.%{$fg[red]%}) ::%{$reset_color%} '
+PROMPT='%{$fg[red]%}$(aws_vault_status)%{$fg[cyan]%}$(stopped_jobs_status)%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[cyan]%}%~%{$reset_color%}% %(?.%{$fg[green]%}.%{$fg[red]%}) ::%{$reset_color%} '
