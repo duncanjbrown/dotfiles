@@ -21,7 +21,6 @@ source "${HOME}/.zsh/aliases"
 source "${HOME}/.zsh/functions"
 source "${HOME}/.zsh/base16"
 source "${HOME}/.zsh/fzf"
-source "${HOME}/.zsh/ssh"
 
 # Display "$(pwd)" in the terminal window title
 DISABLE_AUTO_TITLE="true"
