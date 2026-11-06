@@ -86,8 +86,7 @@ require("lazy").setup({
   -- FZF
   {
     "junegunn/fzf",
-    build = "./install --all",
-    dir = "~/.fzf"
+    dir = "/opt/homebrew/opt/fzf",
   },
   {
     "junegunn/fzf.vim",
