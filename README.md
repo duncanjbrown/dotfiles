@@ -1,7 +1,7 @@
 ## Dependencies
 
 - tmux plus `reattach-to-user-namespace`
-- ZSH/oh-my-zshell
+- ZSH/Oh My Zsh: https://github.com/ohmyzsh/ohmyzsh
 - Base16 Shell [repo](https://github.com/chriskempson/base16-shell)
 - neovim, from homebrew
 - rcm: https://github.com/thoughtbot/rcm
@@ -14,8 +14,18 @@ Download to `~/.dotfiles`.
 
 ```
 brew bundle # You may need to install Homebrew first
+
+# Install Oh My Zsh before running rcup, so ~/.oh-my-zsh is a full checkout
+git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+ln -s ~/.dotfiles/oh-my-zsh/themes/gallois-docker.zsh-theme \
+  ~/.oh-my-zsh/custom/themes/gallois-docker.zsh-theme
+
 rcup
 ```
+
+If zsh complains that `~/.oh-my-zsh/oh-my-zsh.sh` doesn't exist (and
+`compdef` isn't found), Oh My Zsh isn't installed. Move `~/.oh-my-zsh`
+aside and run the steps above.
 
 ## Vim leader bindings
 
