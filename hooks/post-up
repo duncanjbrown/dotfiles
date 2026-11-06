@@ -26,3 +26,14 @@ tic -x -o ~/.terminfo ~/.dotfiles/terminal/tmux-256color.terminfo
 tic -x -o ~/.terminfo ~/.dotfiles/terminal/xterm-256color-italic.terminfo
 tic -x -o ~/.terminfo ~/.dotfiles/terminal/xterm-24bit.terminfo
 show_done_message
+
+echo "Installing Neovim plugins and language servers"
+if command -v nvim >/dev/null 2>&1
+then
+  nvim --headless "+Lazy! install" +qa &&
+    nvim --headless -c "luafile $HOME/.dotfiles/hooks/mason-install.lua" &&
+    show_done_message
+else
+  echo "nvim not found, skipping"
+  echo
+fi
